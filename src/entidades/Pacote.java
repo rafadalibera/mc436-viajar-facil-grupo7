@@ -22,47 +22,22 @@ public class Pacote {
 		this.ListaPasseios = new ArrayList<Passeio>() ;
 	}
 	
-	Pacote()
-	{
-		this.dataIda = null;
-		this.dataVolta = null;
-		this.preco = (Double) null;
-		this.infoDestino = null;
-		this.ListaPasseios = new ArrayList<Passeio>() ;
-	}
-
 	public Date getDataIda() {
 		return dataIda;
-	}
-
-	public void setDataIda(Date dataIda) {
-		this.dataIda = dataIda;
 	}
 
 	public Date getDataVolta() {
 		return dataVolta;
 	}
 
-	public void setDataVolta(Date dataVolta) {
-		this.dataVolta = dataVolta;
-	}
-
 	public double getPreco() {
 		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
 	}
 
 	public String getInfoDestino() {
 		return infoDestino;
 	}
 
-	public void setInfoDestino(String infoDestino) {
-		this.infoDestino = infoDestino;
-	}
-	
 	public Boolean addPasseio(Passeio objPasseio) {
 		return ListaPasseios.add(objPasseio);
 	}
@@ -72,7 +47,7 @@ public class Pacote {
 		return true;
 	}
 	
-	public List<Passeio> getListaPasseio() {
+	public List<Passeio> getListaPasseios() {
 		return this.ListaPasseios;
 	}
 		
