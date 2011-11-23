@@ -14,7 +14,8 @@ class Cliente {
 
     public Cliente(int id, int numero_cartao, String nome, String senha,
                    String rg, String cpf, String email,
-                   Vector<String> telefones) {
+                   Vector<String> telefones)
+    {
         this.id = id;
         this.numero_cartao = numero_cartao;
         this.nome = nome;
@@ -25,47 +26,51 @@ class Cliente {
         this.telefones = telefones;
     }
 
-    public static void main(String[] args) {
-        return;
-    }
-
     /* Retorna o número de identificação deste cliente. */
-    int getId() {
+    int getId()
+    {
         return this.id;
     }
 
     /* Retorna o número do cartão deste cliente. */
-    int getNumeroCartao() {
+    int getNumeroCartao()
+    {
          return this.numero_cartao;
     }
 
     /* Retorna o nome deste cliente. */
-    String getNome() {
+    String getNome()
+    {
         return this.nome;
     }
 
     /* Retorna a senha deste cliente. */
-    String getSenha() {
+    String getSenha()
+    {
         return this.senha;
     }
 
     /* Retorna o rg deste cliente. */
-    String getRg() {
+    String getRg()
+    {
         return this.rg;
     }
 
     /* Retorna o cpf deste cliente. */
-    String getCpf() {
+    String getCpf()
+    {
         return this.cpf;
     }
 
     /* Retorna o email deste cliente. */
-    String getEmail() {
+    String getEmail()
+    {
         return this.email;
     }
 
     /* Retorna o telefone deste cliente. */
-    getTelefones() {
+    getTelefones()
+    {
         return this.telefones;
     }
 }
