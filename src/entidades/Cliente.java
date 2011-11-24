@@ -69,7 +69,7 @@ class Cliente {
     }
 
     /* Retorna o telefone deste cliente. */
-    getTelefones()
+    Vector<String> getTelefones()
     {
         return this.telefones;
     }
