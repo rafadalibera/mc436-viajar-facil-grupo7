@@ -11,7 +11,7 @@ public class HibernateUtil
 
                         // Create the SessionFactory from hibernate.cfg.xml
                         return new Configuration().configure()
-                                .setProperty("hibernate.connection.url", "jdbc:sqlite:" + path)
+                                .setProperty("hibernate.connection.url", "jdbc:derby:base.db;create=true")
                                 .buildSessionFactory();
                 } catch (Throwable ex) {
                         // Make sure you log the exception, as it might be swallowed
