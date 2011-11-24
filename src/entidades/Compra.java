@@ -1,5 +1,7 @@
 package entidades;
 
+import java.util.List;
+
 public class Compra 
 {
 	private int id;

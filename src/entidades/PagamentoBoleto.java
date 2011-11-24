@@ -1,5 +1,6 @@
 package entidades;
 
+
 public class PagamentoBoleto extends Pagamento{
 	
 	private int numBoleto;
@@ -7,14 +8,16 @@ public class PagamentoBoleto extends Pagamento{
 	
 	PagamentoBoleto(String pacote,double preco,int codigoPagamento, int numBoleto)
 	{
-		super(pacote, preco, codigoPagamento);
-		this.numBoleto=numBoleto;
-				
+
+		super(pacote,preco,codigoPagamento);
+		this.numBoleto = numBoleto;	
+
 	}
+	
 
-
-	public int getNumBoleto() {
-		return numBoleto;
+	public int getnumBoleto()
+	{
+		return this.numboleto;
 	}
 
 	public boolean pagar()
@@ -23,4 +26,8 @@ public class PagamentoBoleto extends Pagamento{
 		return true;
 	}
 	
+	public int getConta() {
+		return conta;
+	}
+
 }

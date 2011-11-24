@@ -2,13 +2,13 @@ package entidades;
 
 public class Pagamento 
 {
-	private String pacote; // nao deveria ser um objeto Pacote ?
+	private Pacote pacote;
 	private double preco;
 	private boolean estado; 
 	private int codigoPagamento;
 	
 	///// Construtor basico 
-	Pagamento (String pacote,double preco,int codigoPagamento)
+	Pagamento (Pacote pacote,double preco,int codigoPagamento)
 	{
 		this.pacote = pacote;
 		this.preco = preco;
@@ -32,7 +32,7 @@ public class Pagamento
 	}
 
 	/////////// GETTERS ////////
-	public String getPacote() {
+	public Pacote getPacote() {
 		return pacote;
 	}
 
