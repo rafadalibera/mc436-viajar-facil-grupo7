@@ -12,6 +12,7 @@ public class Passeio {
 	private int totalPessoas;
 	private String infoPasseio;
 	
+	// Construtor basico //
 	public Passeio(int id, int numeroVagas, Date data, String local,
 			boolean reservado, int totalPessoas, String infoPasseio) 
 	{
@@ -23,58 +24,22 @@ public class Passeio {
 		this.totalPessoas = totalPessoas;
 		this.infoPasseio = infoPasseio;
 	}
-	
-	public Passeio()
-	{
-		this.id = (Integer) null;
-		this.numeroVagas = (Integer) null;
-		this.data = null;
-		this.local = null;
-		this.reservado = (Boolean) null;
-		this.totalPessoas = (Integer) null;
-		this.infoPasseio = null;
-	}
-
+   
+	///////////////////////GETTERS & SETTERS/////////////////////////////
 	public int getId() {
 		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 	public int getNumeroVagas() {
 		return numeroVagas;
 	}
-
-	public void setNumeroVagas(int numeroVagas) {
-		this.numeroVagas = numeroVagas;
-	}
 	
-	public void somaPassageiros(int nPassageiros) {
-		numeroVagas -= nPassageiros;
-		totalPessoas += nPassageiros;
-	}
-	
-	public void diminuiPassageiros(int nPassageiros) {
-		numeroVagas += nPassageiros;
-		totalPessoas -= nPassageiros;
-	}
-
 	public Date getData() {
 		return data;
 	}
 
-	public void setData(Date data) {
-		this.data = data;
-	}
-
 	public String getLocal() {
 		return local;
-	}
-
-	public void setLocal(String local) {
-		this.local = local;
 	}
 
 	public boolean isReservado() {
@@ -96,8 +61,15 @@ public class Passeio {
 	public String getInfoPasseio() {
 		return infoPasseio;
 	}
-
-	public void setInfoPasseio(String infoPasseio) {
-		this.infoPasseio = infoPasseio;
-	}	
+	
+	// Dois metodos que alteram o numero de passageiros e de vagas do pacote //
+	public void somaPassageiros(int nPassageiros) {
+		numeroVagas -= nPassageiros;
+		totalPessoas += nPassageiros;
+	}
+	
+	public void diminuiPassageiros(int nPassageiros) {
+		numeroVagas += nPassageiros;
+		totalPessoas -= nPassageiros;
+	}
 }

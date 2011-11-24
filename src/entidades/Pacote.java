@@ -13,6 +13,7 @@ public class Pacote {
 	private String infoDestino;
 	private List<Passeio> ListaPasseios;
 
+	// Construtor basico //
 	Pacote(Date dataIda, Date dataVolta, double preco, String infoDestino)
 	{
 		this.dataIda = dataIda;
@@ -22,47 +23,27 @@ public class Pacote {
 		this.ListaPasseios = new ArrayList<Passeio>() ;
 	}
 	
-	Pacote()
-	{
-		this.dataIda = null;
-		this.dataVolta = null;
-		this.preco = (Double) null;
-		this.infoDestino = null;
-		this.ListaPasseios = new ArrayList<Passeio>() ;
-	}
-
+	/////////////////GETTERS///////////////////////
 	public Date getDataIda() {
 		return dataIda;
-	}
-
-	public void setDataIda(Date dataIda) {
-		this.dataIda = dataIda;
 	}
 
 	public Date getDataVolta() {
 		return dataVolta;
 	}
 
-	public void setDataVolta(Date dataVolta) {
-		this.dataVolta = dataVolta;
-	}
-
 	public double getPreco() {
 		return preco;
-	}
-
-	public void setPreco(double preco) {
-		this.preco = preco;
 	}
 
 	public String getInfoDestino() {
 		return infoDestino;
 	}
 
-	public void setInfoDestino(String infoDestino) {
-		this.infoDestino = infoDestino;
+	public List<Passeio> getListaPasseios() {
+		return this.ListaPasseios;
 	}
-	
+	// Metodos que adicionam e removem um passeio do pacote //
 	public Boolean addPasseio(Passeio objPasseio) {
 		return ListaPasseios.add(objPasseio);
 	}
@@ -70,10 +51,6 @@ public class Pacote {
 	public Boolean removePasseio(Passeio objPasseio)
 	{
 		return true;
-	}
-	
-	public List<Passeio> getListaPasseio() {
-		return this.ListaPasseios;
 	}
 		
 }
