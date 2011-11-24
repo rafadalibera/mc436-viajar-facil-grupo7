@@ -17,7 +17,7 @@ def emitir_getter(classe, tabela, tipo, nome):
     corpo = ("Session s = HibernateUtil.getSessionFactory().getCurrentSession();",
            "s.beginTransaction();",
            'Query q = s.createQuery("from %s where %s=?");' % (tabela, nome),
-           "List l = q.setString(0, %s).list();" % nome,
+           'List l = q.setString(0, String.format("%%s", %s)).list();' % nome,
            "List<%s> ret = new ArrayList<%s>(l.size());" % (classe, classe),
            "for (Object o : l) ret.add((%s) o);" % classe,
            "s.getTransaction().commit();",
