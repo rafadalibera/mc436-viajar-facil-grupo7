@@ -10,6 +10,7 @@ public class Compra
 	private List<Passagem> ListaPassagem;
 	private ReservaHotel hotel;
 	
+	// Construtor basico //
 	Compra(int id, Pacote pacote, GuiaTuristico guia, Pagamento pagamento, 
 			Passeio passeioAdicional, List<Passagem> ListaPassagem, ReservaHotel hotel)
 	{
@@ -22,6 +23,7 @@ public class Compra
 		this.hotel = hotel;
 	}
 
+	////////////////// GETTERS ///////////////////////////
 	public int getId() {
 		return id;
 	}
