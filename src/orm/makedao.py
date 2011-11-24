@@ -2,6 +2,7 @@
 
 import os
 import sys
+import time
 
 INDENT = "    "
 
@@ -50,6 +51,9 @@ if __name__ == "__main__":
 
     classe, _ = os.path.splitext(sys.argv[1])
 
+    print "// Começo do código autogerado"
+    print "// " + time.asctime()
+
     with open(sys.argv[1], "r") as config:
         tabela = config.readline().strip()
         campos = map(str.split, config)
@@ -58,3 +62,4 @@ if __name__ == "__main__":
         emitir_getter(classe, tabela, tipo, nome)
 
     emitir_salvar()
+    print "// Fim do código autogerado"
