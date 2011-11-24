@@ -1,6 +1,14 @@
 package entidades;
 
-import java.util.Vector;
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.ArrayList;
+
+import org.hibernate.Session;
+import org.hibernate.Query;
+
+import orm.util.HibernateUtil;
 
 class Cliente {
     private int id;
@@ -10,11 +18,15 @@ class Cliente {
     private String rg;
     private String cpf;
     private String email;
-    private Vector<String> telefones;
+    private Set<String> telefones;
+
+    public Cliente()
+    {
+    }
 
     public Cliente(int id, int numero_cartao, String nome, String senha,
                    String rg, String cpf, String email,
-                   Vector<String> telefones)
+                   HashSet<String> telefones)
     {
         this.id = id;
         this.numero_cartao = numero_cartao;
@@ -69,7 +81,7 @@ class Cliente {
     }
 
     /* Retorna o telefone deste cliente. */
-    Vector<String> getTelefones()
+    Set<String> getTelefones()
     {
         return this.telefones;
     }

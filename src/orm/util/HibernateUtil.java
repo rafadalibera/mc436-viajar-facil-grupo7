@@ -1,3 +1,5 @@
+package orm.util;
+
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
@@ -8,11 +10,12 @@ public class HibernateUtil
         private static SessionFactory buildSessionFactory()
         {
                 try {
+                        Configuration c = new Configuration();
+
+			c.configure("orm/hibernate.cfg.xml");
 
                         // Create the SessionFactory from hibernate.cfg.xml
-                        return new Configuration().configure()
-                                .setProperty("hibernate.connection.url", "jdbc:derby:base.db;create=true")
-                                .buildSessionFactory();
+                        return c.buildSessionFactory();
                 } catch (Throwable ex) {
                         // Make sure you log the exception, as it might be swallowed
                         System.err.println("Initial SessionFactory creation failed." + ex);
