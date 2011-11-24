@@ -1,6 +1,6 @@
 package entidades;
 
-public class GuiaTuristico 
+public class GuiaTuristico
 {
     private int id;
     private String nome;
@@ -8,7 +8,7 @@ public class GuiaTuristico
     private String email;
     private String localidade;
     private String lingua_falada;
-    
+
     public GuiaTuristico (int id, String nome, int telefone, String email, String localidade, String lingua_estrangeira)
     {
     	this.id = id;
@@ -18,39 +18,34 @@ public class GuiaTuristico
     	this.localidade = localidade;
     	this.lingua_falada = lingua_falada;
     }
-    
-    public static void main(String[] args) {
-        return;
-    }
-    
+
     int getId ()
     {
     	return this.id;
     }
-    
+
     String getNome()
     {
     	return this.nome;
     }
-    
+
     int getTelefone ()
     {
     	return this.telefone;
     }
-    
+
     String getEmail()
     {
     	return this.email;
     }
-    
+
     String getLocalidade()
     {
     	return this.localidade;
     }
-    
-    String get.Lingua()
+
+    String getLingua()
     {
     	return this.lingua_falada;
     }
-    
 }

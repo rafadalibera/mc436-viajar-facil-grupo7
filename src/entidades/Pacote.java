@@ -13,6 +13,7 @@ public class Pacote {
 	private String infoDestino;
 	private List<Passeio> ListaPasseios;
 
+	// Construtor basico //
 	Pacote(Date dataIda, Date dataVolta, double preco, String infoDestino)
 	{
 		this.dataIda = dataIda;
@@ -22,6 +23,7 @@ public class Pacote {
 		this.ListaPasseios = new ArrayList<Passeio>() ;
 	}
 	
+	/////////////////GETTERS///////////////////////
 	public Date getDataIda() {
 		return dataIda;
 	}
@@ -38,6 +40,10 @@ public class Pacote {
 		return infoDestino;
 	}
 
+	public List<Passeio> getListaPasseios() {
+		return this.ListaPasseios;
+	}
+	// Metodos que adicionam e removem um passeio do pacote //
 	public Boolean addPasseio(Passeio objPasseio) {
 		return ListaPasseios.add(objPasseio);
 	}
@@ -45,10 +51,6 @@ public class Pacote {
 	public Boolean removePasseio(Passeio objPasseio)
 	{
 		return true;
-	}
-	
-	public List<Passeio> getListaPasseios() {
-		return this.ListaPasseios;
 	}
 		
 }

@@ -12,6 +12,7 @@ public class Passeio {
 	private int totalPessoas;
 	private String infoPasseio;
 	
+	// Construtor basico //
 	public Passeio(int id, int numeroVagas, Date data, String local,
 			boolean reservado, int totalPessoas, String infoPasseio) 
 	{
@@ -23,7 +24,8 @@ public class Passeio {
 		this.totalPessoas = totalPessoas;
 		this.infoPasseio = infoPasseio;
 	}
-
+   
+	///////////////////////GETTERS & SETTERS/////////////////////////////
 	public int getId() {
 		return id;
 	}
@@ -32,16 +34,6 @@ public class Passeio {
 		return numeroVagas;
 	}
 	
-	public void somaPassageiros(int nPassageiros) {
-		numeroVagas -= nPassageiros;
-		totalPessoas += nPassageiros;
-	}
-	
-	public void diminuiPassageiros(int nPassageiros) {
-		numeroVagas += nPassageiros;
-		totalPessoas -= nPassageiros;
-	}
-
 	public Date getData() {
 		return data;
 	}
@@ -68,5 +60,16 @@ public class Passeio {
 
 	public String getInfoPasseio() {
 		return infoPasseio;
+	}
+	
+	// Dois metodos que alteram o numero de passageiros e de vagas do pacote //
+	public void somaPassageiros(int nPassageiros) {
+		numeroVagas -= nPassageiros;
+		totalPessoas += nPassageiros;
+	}
+	
+	public void diminuiPassageiros(int nPassageiros) {
+		numeroVagas += nPassageiros;
+		totalPessoas -= nPassageiros;
 	}
 }
