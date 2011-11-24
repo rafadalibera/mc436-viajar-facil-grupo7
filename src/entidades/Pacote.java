@@ -50,7 +50,7 @@ public class Pacote {
 
 	public Boolean removePasseio(Passeio objPasseio)
 	{
-		return true;
+		return ListaPasseios.remove(objPasseio);
 	}
 		
 }
