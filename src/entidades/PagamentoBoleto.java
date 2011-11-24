@@ -6,7 +6,7 @@ public class PagamentoBoleto extends Pagamento{
 	private int numBoleto;
 	
 	
-	PagamentoBoleto(String pacote,double preco,int codigoPagamento, int numBoleto)
+	PagamentoBoleto(Pacote pacote,double preco,int codigoPagamento, int numBoleto)
 	{
 
 		super(pacote,preco,codigoPagamento);
@@ -17,7 +17,7 @@ public class PagamentoBoleto extends Pagamento{
 
 	public int getnumBoleto()
 	{
-		return this.numboleto;
+		return numBoleto;
 	}
 
 	public boolean pagar()
@@ -25,9 +25,4 @@ public class PagamentoBoleto extends Pagamento{
 		//paga boleto no sistema externo
 		return true;
 	}
-	
-	public int getConta() {
-		return conta;
-	}
-
 }

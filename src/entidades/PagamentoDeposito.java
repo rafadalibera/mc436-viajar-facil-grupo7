@@ -27,4 +27,10 @@ public class PagamentoDeposito extends Pagamento {
 	public int getConta() {
 		return conta;
 	}
+	
+	public boolean pagar()
+	{
+		//paga deposito no sistema externo
+		return true;
+	}
 }

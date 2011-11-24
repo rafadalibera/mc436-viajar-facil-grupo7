@@ -41,4 +41,10 @@ public class PagamentoCartao extends Pagamento{
 	public Date getDataVencimento() {
 		return dataVencimento;
 	}
+	
+	public boolean pagar()
+	{
+		//realiza pagamento cartao no sistema externo
+		return true;
+	}
 }
