@@ -1,11 +1,11 @@
 package entidades;
 
-public class PagamentoDeposito extends Pagamento{
+public class PagamentoBoleto extends Pagamento{
 	
 	private int numBoleto;
 	
 	
-	PagamentoDeposito(String pacote,double preco,int codigoPagamento, int numBoleto)
+	PagamentoBoleto(String pacote,double preco,int codigoPagamento, int numBoleto)
 	{
 		super(pacote, preco, codigoPagamento);
 		this.numBoleto=numBoleto;
@@ -17,7 +17,7 @@ public class PagamentoDeposito extends Pagamento{
 		return numBoleto;
 	}
 
-	public boolean payBoleto()
+	public boolean pagar()
 	{
 		//paga boleto no sistema externo
 		return true;
