@@ -87,13 +87,13 @@ class Cliente {
     }
 
     // Começo do código autogerado
-    // Thu Nov 24 20:25:44 2011
+    // Thu Nov 24 21:24:33 2011
     public static List<Cliente> porId(int id)
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         s.beginTransaction();
         Query q = s.createQuery("from Cliente where id=?");
-        List l = q.setString(0, id).list();
+        List l = q.setString(0, String.format("%s", id)).list();
         List<Cliente> ret = new ArrayList<Cliente>(l.size());
         for (Object o : l) ret.add((Cliente) o);
         s.getTransaction().commit();
@@ -105,7 +105,7 @@ class Cliente {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         s.beginTransaction();
         Query q = s.createQuery("from Cliente where email=?");
-        List l = q.setString(0, email).list();
+        List l = q.setString(0, String.format("%s", email)).list();
         List<Cliente> ret = new ArrayList<Cliente>(l.size());
         for (Object o : l) ret.add((Cliente) o);
         s.getTransaction().commit();
@@ -117,7 +117,7 @@ class Cliente {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         s.beginTransaction();
         Query q = s.createQuery("from Cliente where nome=?");
-        List l = q.setString(0, nome).list();
+        List l = q.setString(0, String.format("%s", nome)).list();
         List<Cliente> ret = new ArrayList<Cliente>(l.size());
         for (Object o : l) ret.add((Cliente) o);
         s.getTransaction().commit();
