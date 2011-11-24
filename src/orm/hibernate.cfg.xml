@@ -29,6 +29,7 @@
 		<property name="hbm2ddl.auto">update</property>
 
 		<mapping resource="orm/Cliente.hbm.xml"/>
+		<mapping resource="orm/Passeio.hbm.xml"/>
 
 
 	</session-factory>
