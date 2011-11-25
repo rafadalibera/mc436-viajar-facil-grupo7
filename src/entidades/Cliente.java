@@ -26,7 +26,7 @@ class Cliente {
 
     public Cliente(int id, int numero_cartao, String nome, String senha,
                    String rg, String cpf, String email,
-                   HashSet<String> telefones)
+                   Set<String> telefones)
     {
         this.id = id;
         this.numero_cartao = numero_cartao;
