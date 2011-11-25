@@ -7,9 +7,16 @@ import time
 INDENT = "    "
 
 def emitir_getter(classe, tabela, tipo, nome):
+
+    nome_funcao = nome
+    if "_" in nome:
+        nome_funcao = nome.replace("_", " ").title().replace(" ", "")
+
+    nome_funcao = nome_funcao[0].upper() + nome_funcao[1:]
+
     print "public static List<%s> por%s(%s %s)" \
           % (classe,
-             nome.replace("_", " ").title().replace(" ", ""),
+             nome_funcao,
              tipo,
              nome)
 
