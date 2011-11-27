@@ -5,14 +5,16 @@
 <hibernate-configuration>
 	<session-factory>
 		<!-- Database connection settings -->
-		<property name="connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+		<property name="connection.driver_class">org.sqlite.JDBC</property>
 
-		<property name="connection.url">jdbc:derby:base.db;create=true</property>
+		<property name="connection.url">jdbc:sqlite:base.db</property>
 		<property name="connection.username"></property>
 		<property name="connection.password"></property>
 
 		<!-- JDBC connection pool (use the built-in) -->
 		<property name="connection.pool_size">1</property>
+
+		<property name="dialect">orm.util.SQLiteDialect</property>
 
 		<!-- Enable Hibernate's automatic session context management -->
 		<property name="current_session_context_class">thread</property>
@@ -24,10 +26,11 @@
 		<property name="show_sql">true</property>
 
 		<!-- Drop and re-create the database schema on startup -->
-		<!-- <property name="hbm2ddl.auto">update</property> -->
+		<property name="hbm2ddl.auto">update</property>
 
-
-		<mapping resource="Usuario.hbm.xml"/>
+		<mapping resource="orm/Cliente.hbm.xml"/>
+		<mapping resource="orm/Passeio.hbm.xml"/>
+		<mapping resource="orm/Pacote.hbm.xml"/>
 
 
 	</session-factory>

@@ -1,0 +1,4 @@
+Cliente
+int id
+String email
+String nome

@@ -1,11 +1,12 @@
 <?xml version="1.0"?>
-<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping package="entidades" default-access="field">
-
 	<class name="Cliente" table="Cliente">
 		<id name="id" column="cliente_id">
-			<generator class="native"/>
+			<generator class="increment"/>
 		</id>
 
 		<property name="numero_cartao" />
@@ -14,7 +15,11 @@
 		<property name="rg" />
 		<property name="cpf" />
 		<property name="email" />
-		<property name="telefones" />
+
+		<set lazy="false" name="telefones" table="cliente_telefones">
+			<key column="cliente_id" />
+			<element type="string" column="telefone" />
+		</set>
 	</class>
 
 </hibernate-mapping>
