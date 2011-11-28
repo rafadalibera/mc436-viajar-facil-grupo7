@@ -10,7 +10,7 @@ import org.hibernate.Query;
 
 import orm.util.HibernateUtil;
 
-class Cliente {
+public class Cliente {
     private int id;
     private int numero_cartao;
     private String nome;
@@ -39,49 +39,49 @@ class Cliente {
     }
 
     /* Retorna o número de identificação deste cliente. */
-    int getId()
+    public int getId()
     {
         return this.id;
     }
 
     /* Retorna o número do cartão deste cliente. */
-    int getNumeroCartao()
+    public int getNumeroCartao()
     {
          return this.numero_cartao;
     }
 
     /* Retorna o nome deste cliente. */
-    String getNome()
+    public String getNome()
     {
         return this.nome;
     }
 
     /* Retorna a senha deste cliente. */
-    String getSenha()
+    public String getSenha()
     {
         return this.senha;
     }
 
     /* Retorna o rg deste cliente. */
-    String getRg()
+    public String getRg()
     {
         return this.rg;
     }
 
     /* Retorna o cpf deste cliente. */
-    String getCpf()
+    public String getCpf()
     {
         return this.cpf;
     }
 
     /* Retorna o email deste cliente. */
-    String getEmail()
+    public String getEmail()
     {
         return this.email;
     }
 
     /* Retorna o telefone deste cliente. */
-    Set<String> getTelefones()
+    public Set<String> getTelefones()
     {
         return this.telefones;
     }

@@ -9,8 +9,8 @@ import org.hibernate.Query;
 
 import orm.util.HibernateUtil;
 
-public class Passeio {
-
+public class Passeio 
+{
     private int id;
     private int numeroVagas;
     private Date data;
@@ -117,3 +117,4 @@ public class Passeio {
 
     // Fim do código autogerado
 }
+>>>>>>> 90c15322fa267fca970b61a14cb91ada38d41602

@@ -10,8 +10,8 @@ import orm.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Query;
 
-public class Pacote {
-
+public class Pacote 
+{
     private int id;
     private Date dataIda;
     private Date dataVolta;

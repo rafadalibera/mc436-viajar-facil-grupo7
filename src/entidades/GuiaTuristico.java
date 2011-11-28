@@ -9,7 +9,7 @@ public class GuiaTuristico
     private String localidade;
     private String lingua_falada;
 
-    public GuiaTuristico (int id, String nome, int telefone, String email, String localidade, String lingua_estrangeira)
+    public GuiaTuristico (int id, String nome, int telefone, String email, String localidade, String lingua_falada)
     {
     	this.id = id;
     	this.nome = nome;

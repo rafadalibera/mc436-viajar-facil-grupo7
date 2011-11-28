@@ -13,6 +13,7 @@ public class ReservaHotel
 	private int id;
 	private double preco;
 	
+	// Construtor basico //
 	ReservaHotel(String hotel, int quarto, int numeroEstrelas, Date dataEntrada,
 			     Date dataSaida, int hospedesQuarto, int id, double preco)
 	{
@@ -25,7 +26,8 @@ public class ReservaHotel
 		this.preco = preco;
 		this.id = id;		
 	}
-
+	////////////////////////////////GETTERS////////////////////////////////////
+					
 	public String getHotel() {
 		return hotel;
 	}
@@ -58,6 +60,7 @@ public class ReservaHotel
 		return preco;
 	}
 	
+	// Metodo estatico que obteria uma reserva com o sistema externo de reserva de hoteis //
 /*	static public int obterReservaHotel(String hotel, int numeroEstrelas, Date dataEntrada, 
 			                            Date dataSaida, int hospedesQuarto, double preco)
 	{
