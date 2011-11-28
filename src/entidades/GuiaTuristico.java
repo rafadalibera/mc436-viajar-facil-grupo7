@@ -48,4 +48,40 @@ public class GuiaTuristico
     {
     	return this.lingua_falada;
     }
+
+    // Começo do código autogerado
+    // Mon Nov 28 14:45:16 2011
+    public static List<GuiaTuristico> porId(int id)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from GuiaTuristico where id=:id");
+        List l = q.setParameter("id", id).list();
+        List<GuiaTuristico> ret = new ArrayList<GuiaTuristico>(l.size());
+        for (Object o : l) ret.add((GuiaTuristico) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public static List<GuiaTuristico> porLinguaFalada(String lingua_falada)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from GuiaTuristico where lingua_falada=:lingua_falada");
+        List l = q.setParameter("lingua_falada", lingua_falada).list();
+        List<GuiaTuristico> ret = new ArrayList<GuiaTuristico>(l.size());
+        for (Object o : l) ret.add((GuiaTuristico) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public void salvar()
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        s.save(this);
+        s.getTransaction().commit();
+    }
+
+    // Fim do código autogerado
 }
