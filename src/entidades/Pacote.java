@@ -10,8 +10,13 @@ import orm.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Query;
 
+<<<<<<< HEAD
 public class Pacote {
 
+=======
+public class Pacote 
+{
+>>>>>>> 390c92626b71c0c5fbbb015d065b5213cbe615ac
     private int id;
     private Date dataIda;
     private Date dataVolta;
@@ -107,5 +112,9 @@ public class Pacote {
         s.getTransaction().commit();
     }
 
+<<<<<<< HEAD
 
+=======
+    // Fim do código autogerado
+>>>>>>> 390c92626b71c0c5fbbb015d065b5213cbe615ac
 }

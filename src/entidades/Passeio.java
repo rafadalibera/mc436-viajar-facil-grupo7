@@ -9,8 +9,9 @@ import org.hibernate.Query;
 
 import orm.util.HibernateUtil;
 
-public class Passeio {
 
+public class Passeio 
+{
     private int id;
     private int numeroVagas;
     private Date data;
@@ -114,4 +115,8 @@ public class Passeio {
     }
 
 }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 90c15322fa267fca970b61a14cb91ada38d41602
+>>>>>>> 390c92626b71c0c5fbbb015d065b5213cbe615ac
