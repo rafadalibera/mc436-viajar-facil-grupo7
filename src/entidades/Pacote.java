@@ -1,56 +1,112 @@
 package entidades;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 
+import orm.util.HibernateUtil;
+import org.hibernate.Session;
+import org.hibernate.Query;
 
-public class Pacote {
+public class Pacote 
+{
+    private int id;
+    private Date dataIda;
+    private Date dataVolta;
+    private double preco;
+    private String infoDestino;
+    private Set<Passeio> passeios;
 
-	private Date dataIda;
-	private Date dataVolta;
-	private double preco;
-	private String infoDestino;
-	private List<Passeio> ListaPasseios;
+    Pacote()
+    {
+    }
 
-	// Construtor basico //
-	Pacote(Date dataIda, Date dataVolta, double preco, String infoDestino)
-	{
-		this.dataIda = dataIda;
-		this.dataVolta = dataVolta;
-		this.preco = preco;
-		this.infoDestino = infoDestino;
-		this.ListaPasseios = new ArrayList<Passeio>() ;
-	}
-	
-	/////////////////GETTERS///////////////////////
-	public Date getDataIda() {
-		return dataIda;
-	}
+    Pacote(int id, Date dataIda, Date dataVolta, double preco, String infoDestino)
+    {
+        this.id = id;
+        this.dataIda = dataIda;
+        this.dataVolta = dataVolta;
+        this.preco = preco;
+        this.infoDestino = infoDestino;
+        this.passeios = new HashSet<Passeio>() ;
+    }
 
-	public Date getDataVolta() {
-		return dataVolta;
-	}
+    public Date getDataIda() {
+        return dataIda;
+    }
 
-	public double getPreco() {
-		return preco;
-	}
+    public Date getDataVolta() {
+        return dataVolta;
+    }
 
-	public String getInfoDestino() {
-		return infoDestino;
-	}
+    public double getPreco() {
+        return preco;
+    }
 
-	public List<Passeio> getListaPasseios() {
-		return this.ListaPasseios;
-	}
-	// Metodos que adicionam e removem um passeio do pacote //
-	public Boolean addPasseio(Passeio objPasseio) {
-		return ListaPasseios.add(objPasseio);
-	}
+    public String getInfoDestino() {
+        return infoDestino;
+    }
 
-	public Boolean removePasseio(Passeio objPasseio)
-	{
-		return ListaPasseios.remove(objPasseio);
-	}
-		
+    public Boolean addPasseio(Passeio objPasseio) {
+        return passeios.add(objPasseio);
+    }
+
+    public Boolean removePasseio(Passeio objPasseio)
+    {
+        return true;
+    }
+
+    public Set<Passeio> getPasseios() {
+        return this.passeios;
+    }
+
+    // Começo do código autogerado
+    // Fri Nov 25 11:28:37 2011
+    public static List<Pacote> porId(int id)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Pacote where id=:id");
+        List l = q.setParameter("id", id).list();
+        List<Pacote> ret = new ArrayList<Pacote>(l.size());
+        for (Object o : l) ret.add((Pacote) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public static List<Pacote> porDataIda(Date dataIda)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Pacote where dataIda=:dataIda");
+        List l = q.setParameter("dataIda", dataIda).list();
+        List<Pacote> ret = new ArrayList<Pacote>(l.size());
+        for (Object o : l) ret.add((Pacote) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public static List<Pacote> porDataVolta(Date dataVolta)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Pacote where dataVolta=:dataVolta");
+        List l = q.setParameter("dataVolta", dataVolta).list();
+        List<Pacote> ret = new ArrayList<Pacote>(l.size());
+        for (Object o : l) ret.add((Pacote) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public void salvar()
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        s.save(this);
+        s.getTransaction().commit();
+    }
+
+    // Fim do código autogerado
 }

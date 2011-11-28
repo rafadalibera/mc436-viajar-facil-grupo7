@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entidades" default-access="field">
+	<class name="Pacote" table="Pacote">
+		<id name="id" column="pacote_id">
+			<generator class="increment"/>
+		</id>
+
+		<property name="dataIda" />
+		<property name="dataVolta" />
+		<property name="preco" />
+		<property name="infoDestino" />
+
+		<set lazy="false" name="passeios" table="pacote_passeios">
+			<key column="pacote_id" />
+			<many-to-many column="passeio_id" class="Passeio" />
+		</set>
+	</class>
+</hibernate-mapping>

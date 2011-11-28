@@ -1,6 +1,14 @@
 package entidades;
 
-import java.util.Vector;
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.ArrayList;
+
+import org.hibernate.Session;
+import org.hibernate.Query;
+
+import orm.util.HibernateUtil;
 
 public class Cliente {
     private int id;
@@ -10,11 +18,15 @@ public class Cliente {
     private String rg;
     private String cpf;
     private String email;
-    private Vector<String> telefones;
+    private Set<String> telefones;
+
+    public Cliente()
+    {
+    }
 
     public Cliente(int id, int numero_cartao, String nome, String senha,
                    String rg, String cpf, String email,
-                   Vector<String> telefones)
+                   Set<String> telefones)
     {
         this.id = id;
         this.numero_cartao = numero_cartao;
@@ -74,41 +86,51 @@ public class Cliente {
         return this.telefones;
     }
 
+    // Começo do código autogerado
+    // Thu Nov 24 21:24:33 2011
+    public static List<Cliente> porId(int id)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Cliente where id=?");
+        List l = q.setString(0, String.format("%s", id)).list();
+        List<Cliente> ret = new ArrayList<Cliente>(l.size());
+        for (Object o : l) ret.add((Cliente) o);
+        s.getTransaction().commit();
+        return ret;
+    }
 
-public static List<Cliente> porNome(String nome)
-{
-    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
-    s.beginTransaction();
-    Query q = s.createQuery("from Cliente where nome=?");
-    List l = q.setString(0, nome).list();
-    List<Cliente> ret = new ArrayList<Cliente>(l.size());
-    for (Object o : l) ret.add((Cliente) o);
-    s.getTransaction().commit();
-    return ret;
-}
+    public static List<Cliente> porEmail(String email)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Cliente where email=?");
+        List l = q.setString(0, String.format("%s", email)).list();
+        List<Cliente> ret = new ArrayList<Cliente>(l.size());
+        for (Object o : l) ret.add((Cliente) o);
+        s.getTransaction().commit();
+        return ret;
+    }
 
-public void salvar()
-{
-    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
-    s.beginTransaction();
-    s.save(this);
-    s.getTransaction().commit();
-}
+    public static List<Cliente> porNome(String nome)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Cliente where nome=?");
+        List l = q.setString(0, String.format("%s", nome)).list();
+        List<Cliente> ret = new ArrayList<Cliente>(l.size());
+        for (Object o : l) ret.add((Cliente) o);
+        s.getTransaction().commit();
+        return ret;
+    }
 
-public static List<Cliente> porEmail(String email)
-{
-    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
-    s.beginTransaction();
-    Query q = s.createQuery("from Cliente where email=?");
-    List l = q.setString(0, email).list();
-    List<Cliente> ret = new ArrayList<Cliente>(l.size());
-    for (Object o : l) ret.add((Cliente) o);
-    s.getTransaction().commit();
-    return ret;
-}
+    public void salvar()
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        s.save(this);
+        s.getTransaction().commit();
+    }
 
-
-
-
-
+    // Fim do código autogerado
 }

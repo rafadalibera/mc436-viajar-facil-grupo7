@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entidades" default-access="field">
+	<class name="Passeio" table="Passeio">
+		<id name="id" column="passeio_id">
+			<generator class="increment"/>
+		</id>
+
+		<property name="numeroVagas" />
+		<property name="data" />
+		<property name="local" />
+		<property name="reservado" />
+		<property name="totalPessoas" />
+		<property name="infoPasseio" />
+	</class>
+</hibernate-mapping>
