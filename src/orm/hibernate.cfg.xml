@@ -31,6 +31,7 @@
 		<mapping resource="orm/Cliente.hbm.xml"/>
 		<mapping resource="orm/Passeio.hbm.xml"/>
 		<mapping resource="orm/Pacote.hbm.xml"/>
+		<mapping resource="orm/GuiaTuristico.hbm.xml"/>
 
 
 	</session-factory>
