@@ -19,32 +19,32 @@ public class GuiaTuristico
     	this.lingua_falada = lingua_falada;
     }
 
-    int getId ()
+    public int getId ()
     {
     	return this.id;
     }
 
-    String getNome()
+    public String getNome()
     {
     	return this.nome;
     }
 
-    int getTelefone ()
+    public int getTelefone ()
     {
     	return this.telefone;
     }
 
-    String getEmail()
+    public String getEmail()
     {
     	return this.email;
     }
 
-    String getLocalidade()
+    public String getLocalidade()
     {
     	return this.localidade;
     }
 
-    String getLingua()
+    public String getLingua()
     {
     	return this.lingua_falada;
     }
