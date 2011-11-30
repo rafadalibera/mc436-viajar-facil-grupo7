@@ -12,7 +12,6 @@
 		<property name="numeroVagas" />
 		<property name="data" />
 		<property name="local" />
-		<property name="reservado" />
 		<property name="totalPessoas" />
 		<property name="infoPasseio" />
 	</class>

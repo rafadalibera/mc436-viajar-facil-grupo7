@@ -16,9 +16,9 @@ public class Passeio
     private int numeroVagas;
     private Date data;
     private String local;
-    private boolean reservado;
     private int totalPessoas;
     private String infoPasseio;
+    private boolean reservado = false;
 
     public Passeio()
     {

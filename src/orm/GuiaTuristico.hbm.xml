@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entidades" default-access="field">
+	<class name="GuiaTuristico" table="GuiaTuristico">
+		<id name="id" column="_id">
+			<generator class="increment"/>
+		</id>
+
+		<property name="nome" />
+		<property name="telefone" />
+		<property name="email" />
+		<property name="localidade" />
+
+		<set lazy="false" name="linguas" table="guia_linguas">
+			<key column="guia_turistico_id" />
+			<element type="string" column="lingua" />
+		</set>
+	</class>
+
+</hibernate-mapping>
