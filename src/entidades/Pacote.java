@@ -24,12 +24,13 @@ public class Pacote
     {
     }
 
-    Pacote(int id, String destino, Date dataIda, Date dataVolta, double preco, String infoDestino)
+    Pacote(int id, String destino, int anoIda, int mesIda, int diaIda, 
+           int anoVolta, int mesVolta, int diaVolta, double preco, String infoDestino)
     {
         this.id = id;
         this.destino = destino;
-        this.dataIda = dataIda;
-        this.dataVolta = dataVolta;
+        this.dataIda = new Date(anoIda,mesIda,diaIda);
+        this.dataVolta = new Data(anoVolta,mesVolta,diaVolta);
         this.preco = preco;
         this.infoDestino = infoDestino;
         this.passeios = new HashSet<Passeio>() ;
