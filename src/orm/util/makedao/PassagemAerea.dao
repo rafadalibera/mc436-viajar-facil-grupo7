@@ -1,0 +1,10 @@
+PassagemAerea
+int id
+String destino
+String origem
+int data
+double preco
+String aeroporto
+int portao_embarque
+String companhia_aerea
+String poltrona

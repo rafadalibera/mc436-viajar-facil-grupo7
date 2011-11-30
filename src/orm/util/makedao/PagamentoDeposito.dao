@@ -1,0 +1,8 @@
+PagamentoDeposito
+int codigoPagamento
+double preco
+boolean estado
+Pacote pacote
+String banco
+int agencia
+int conta

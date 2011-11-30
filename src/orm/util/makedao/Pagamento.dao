@@ -1,0 +1,5 @@
+Pagamento	
+int codigoPagamento
+double preco
+boolean estado
+Pacote pacote
