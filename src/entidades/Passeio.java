@@ -10,7 +10,7 @@ import org.hibernate.Query;
 import orm.util.HibernateUtil;
 
 
-public class Passeio 
+public class Passeio
 {
     private int id;
     private double preco;
@@ -24,7 +24,7 @@ public class Passeio
     }
 
     public Passeio(int id, String local, int ano, int mes, int dia,
-            boolean habilitado, String infoPasseio, double preco)
+                   String infoPasseio, double preco)
     {
         this.id = id;
         this.local = local;
