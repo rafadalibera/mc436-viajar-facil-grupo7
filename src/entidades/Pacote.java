@@ -13,19 +13,21 @@ import org.hibernate.Query;
 public class Pacote 
 {
     private int id;
+    public String destino;
     private Date dataIda;
     private Date dataVolta;
     private double preco;
     private String infoDestino;
     private Set<Passeio> passeios;
 
-    Pacote()
+    public Pacote()
     {
     }
 
-    Pacote(int id, Date dataIda, Date dataVolta, double preco, String infoDestino)
+    Pacote(int id, String destino, Date dataIda, Date dataVolta, double preco, String infoDestino)
     {
         this.id = id;
+        this.destino = destino;
         this.dataIda = dataIda;
         this.dataVolta = dataVolta;
         this.preco = preco;
@@ -63,7 +65,19 @@ public class Pacote
     }
 
     // Começo do código autogerado
-    // Fri Nov 25 11:28:37 2011
+    // Mon Nov 28 14:07:31 2011
+    public static List<Pacote> porDestino(String destino)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Pacote where destino=:destino");
+        List l = q.setParameter("destino", destino).list();
+        List<Pacote> ret = new ArrayList<Pacote>(l.size());
+        for (Object o : l) ret.add((Pacote) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
     public static List<Pacote> porId(int id)
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -107,6 +121,5 @@ public class Pacote
         s.save(this);
         s.getTransaction().commit();
     }
-
     // Fim do código autogerado
 }
