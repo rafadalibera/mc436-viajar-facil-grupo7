@@ -1,0 +1,37 @@
+<infos>
+<pacote>
+    <id>10</id>
+    <dataIda dia="12" mes="11" ano="2011" />
+    <dataVolta dia="14" mes="11" ano="2011" />
+    <local>Maceió</local>
+    <info>Conheça as belíssimas praias de Maceió neste fim de semana inesquecível!</info>
+    <valor>564.21</valor>
+    <passeio id="1" />
+    <passeio id="2" />
+</pacote>
+
+<passeio>
+    <id>1</id>
+    <data dia="13" mes="11" ano="2011" />
+    <local>Praia do Paranapanema</local>
+    <info>Um passeio pela praia mais preservada do Nordeste brasileiro, culminando em um luau com sob o mágico pôr-do-sol alagoano.</info>
+    <valor>121.65</valor>
+</passeio>
+
+<passeio>
+    <id>2</id>
+    <data dia="14" mes="11" ano="2011" />
+    <local>Praia de Pindamangápio</local>
+    <info>Um magnífico café da manhã na ensolarada Praia de Pindamangápio.</info>
+    <valor>76.32</valor>
+</passeio>
+
+<guia>
+    <id>1</id>
+    <nome>Rafael Padilha</nome>
+    <telefone>97624566</telefone>
+    <email>padilha@gmail.com</email>
+    <local>Maceió</local>
+    <lingua>Italiano</lingua>
+</guia>
+</infos>
