@@ -30,7 +30,7 @@ public class Pacote
         this.id = id;
         this.destino = destino;
         this.dataIda = new Date(anoIda,mesIda,diaIda);
-        this.dataVolta = new Data(anoVolta,mesVolta,diaVolta);
+        this.dataVolta = new Date(anoVolta,mesVolta,diaVolta);
         this.preco = preco;
         this.infoDestino = infoDestino;
         this.passeios = new HashSet<Passeio>() ;

@@ -1,5 +1,6 @@
 package entidades; 
 
+import java.util.Date;
 import java.util.List;
 import java.util.Set;
 import java.util.HashSet;

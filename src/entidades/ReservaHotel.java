@@ -30,7 +30,7 @@ public class ReservaHotel
 		this.hotel = hotel;
 		this.quarto = quarto;
 		this.numeroEstrelas = numeroEstrelas;
-		this.dataEntrada = new Date(anoEntrado, mesEntrada, diaEntrada);
+		this.dataEntrada = new Date(anoEntrada, mesEntrada, diaEntrada);
 		this.dataSaida = new Date(anoSaida, mesSaida, diaSaida);
 		this.hospedesQuarto = hospedesQuarto;
 		this.preco = preco;

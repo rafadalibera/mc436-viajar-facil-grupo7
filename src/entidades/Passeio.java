@@ -23,24 +23,23 @@ public class Passeio
     {
     }
 
-    public Passeio(int id, String local, int ano, int mes, int dia
+    public Passeio(int id, String local, int ano, int mes, int dia,
             boolean habilitado, String infoPasseio, double preco)
     {
         this.id = id;
-        this.data = data;
         this.local = local;
         this.habilitado = habilitado;
         this.infoPasseio = infoPasseio;
-	this.preco = preco;
-	this.habilitado = false;
-	this.Date = new Date(ano,mes,dia);
+		this.preco = preco;
+		this.habilitado = false;
+		this.data = new Date(ano,mes,dia);
     }
 
     public int getId() {
         return id;
     }
 
-    public int getpreco() {
+    public double getpreco() {
         return preco;
     }
 
@@ -57,7 +56,8 @@ public class Passeio
     }
 
     public void habilita() {
-        this.habilita = true;
+        this.habilitado = true;
+    }
     
 
     public String getInfoPasseio() {
