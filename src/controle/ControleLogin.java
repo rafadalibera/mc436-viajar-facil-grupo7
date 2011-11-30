@@ -6,6 +6,8 @@ import java.util.Vector;
 
 import entidades.Cliente;
 
+import controle.ControleCadastro;
+
 public class ControleLogin
 {
     private Cliente clientes;
@@ -44,8 +46,9 @@ public class ControleLogin
 	//Obtém a senha do usuário no BD
 	senha_teste = c2.getSenha();
 		
+	System.out.println("Senha teste: " + senha_teste);
 	//verifica se a senha digitada é igual a senha do usuário no BD
-	if (senha_teste.equals(senha))
+	if (senha_teste.equals(ControleCadastro.getInstance().hashSenha(senha)))
 	    retorno = true;
 	else
 	    retorno = false;

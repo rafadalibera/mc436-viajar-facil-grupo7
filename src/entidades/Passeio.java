@@ -15,9 +15,9 @@ public class Passeio
     private int numeroVagas;
     private Date data;
     private String local;
-    private boolean reservado;
     private int totalPessoas;
     private String infoPasseio;
+    private boolean reservado = false;
 
     public Passeio()
     {
@@ -117,4 +117,3 @@ public class Passeio
 
     // Fim do código autogerado
 }
->>>>>>> 90c15322fa267fca970b61a14cb91ada38d41602

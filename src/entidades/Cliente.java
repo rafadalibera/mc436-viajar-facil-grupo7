@@ -87,25 +87,33 @@ public class Cliente {
     }
 
     // Começo do código autogerado
-    // Thu Nov 24 21:24:33 2011
+    // Wed Nov 30 11:57:16 2011
     public static List<Cliente> porId(int id)
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         s.beginTransaction();
-        Query q = s.createQuery("from Cliente where id=?");
-        List l = q.setString(0, String.format("%s", id)).list();
+        Query q = s.createQuery("from Cliente where id=:id");
+        List l = q.setParameter("id", id).list();
         List<Cliente> ret = new ArrayList<Cliente>(l.size());
         for (Object o : l) ret.add((Cliente) o);
         s.getTransaction().commit();
         return ret;
     }
 
+    public static int maiorId()
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("select max(id) from Cliente");
+        return (Integer) q.list().get(0);
+    }
+
     public static List<Cliente> porEmail(String email)
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         s.beginTransaction();
-        Query q = s.createQuery("from Cliente where email=?");
-        List l = q.setString(0, String.format("%s", email)).list();
+        Query q = s.createQuery("from Cliente where email=:email");
+        List l = q.setParameter("email", email).list();
         List<Cliente> ret = new ArrayList<Cliente>(l.size());
         for (Object o : l) ret.add((Cliente) o);
         s.getTransaction().commit();
@@ -116,8 +124,8 @@ public class Cliente {
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         s.beginTransaction();
-        Query q = s.createQuery("from Cliente where nome=?");
-        List l = q.setString(0, String.format("%s", nome)).list();
+        Query q = s.createQuery("from Cliente where nome=:nome");
+        List l = q.setParameter("nome", nome).list();
         List<Cliente> ret = new ArrayList<Cliente>(l.size());
         for (Object o : l) ret.add((Cliente) o);
         s.getTransaction().commit();
