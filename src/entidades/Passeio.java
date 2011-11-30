@@ -40,6 +40,10 @@ public class Passeio
         return id;
     }
 
+    public int getVagasDisponiveis(){
+	return numeroVagas - totalPessoas;
+    }	
+
     public int getNumeroVagas() {
         return numeroVagas;
     }
