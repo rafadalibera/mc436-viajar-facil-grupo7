@@ -61,6 +61,11 @@ public class Pacote
         return true;
     }
 
+    public String getDestino()
+    {
+        return destino;
+    }
+
     public Set<Passeio> getPasseios() {
         return this.passeios;
     }
