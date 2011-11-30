@@ -16,10 +16,10 @@ public class PassagemMaritima extends Passagem
 {
 	private String porto;
 	private String companhia_maritima;
-	private String cabine;
+	private int cabine;
 	
 	public PassagemMaritima (int id, String destino, String origem, int ano, int mes, int dia, int preco, 
-                                 String porto, String companhia_maritima, String cabine)
+                                 String porto, String companhia_maritima, int cabine)
 	{
 		super(id, destino, origem, ano, mes, dia, preco);
 		
@@ -39,7 +39,7 @@ public class PassagemMaritima extends Passagem
 		return this.companhia_maritima;
 	}
 	
-	String getCabine()
+	int getCabine()
 	{
 		return this.cabine;
 	}
