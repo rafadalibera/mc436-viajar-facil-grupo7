@@ -1,0 +1,6 @@
+PagamentoBoleto
+int codigoPagamento
+double preco
+boolean estado
+Pacote pacote
+int numBoleto

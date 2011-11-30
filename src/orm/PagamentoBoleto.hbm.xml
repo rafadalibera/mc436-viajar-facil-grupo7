@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entidades" default-access="field">
+	<class name="PagamentoBoleto" table="PagamentoBoleto">
+		<id name="id" column="pagamento_id">
+			<generator class="increment"/>
+		</id>
+
+		<property name="preco" />
+		<property name="codigoPagamento" />
+		<property name="estado" />
+		<property name="Pacote"/>
+		<property name="numBoleto"/>
+
+		
+	</class>
+</hibernate-mapping>

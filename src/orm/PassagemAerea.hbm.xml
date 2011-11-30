@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entidades" default-access="field">
+	<class name="PassagemAerea" table="PassagemAerea">
+		<id name="id" column="passagem_id">
+			<generator class="increment"/>
+		</id>
+
+		<property name="id" />
+		<property name="destino" />
+		<property name="origem" />
+		<property name="data" />
+		<property name="preco" />
+		<property name="aeroporto" />
+		<property name="portao_embarque" />
+		<property name="companhia_aerea" />
+		<property name="poltrona" />
+
+	</class>
+</hibernate-mapping>

@@ -68,4 +68,111 @@ public class ReservaHotel
 		return id;
 	}
 */
+
+	public static List<ReservaHotel> porHotel(String hotel)
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    Query q = s.createQuery("from ReservaHotel where hotel=:hotel");
+	    List l = q.setParameter("hotel", hotel).list();
+	    List<ReservaHotel> ret = new ArrayList<ReservaHotel>(l.size());
+	    for (Object o : l) ret.add((ReservaHotel) o);
+	    s.getTransaction().commit();
+	    return ret;
+	}
+
+	public static List<ReservaHotel> porQuarto(int quarto)
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    Query q = s.createQuery("from ReservaHotel where quarto=:quarto");
+	    List l = q.setParameter("quarto", quarto).list();
+	    List<ReservaHotel> ret = new ArrayList<ReservaHotel>(l.size());
+	    for (Object o : l) ret.add((ReservaHotel) o);
+	    s.getTransaction().commit();
+	    return ret;
+	}
+
+	public static List<ReservaHotel> porNumeroEstrelas(int numeroEstrelas)
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    Query q = s.createQuery("from ReservaHotel where numeroEstrelas=:numeroEstrelas");
+	    List l = q.setParameter("numeroEstrelas", numeroEstrelas).list();
+	    List<ReservaHotel> ret = new ArrayList<ReservaHotel>(l.size());
+	    for (Object o : l) ret.add((ReservaHotel) o);
+	    s.getTransaction().commit();
+	    return ret;
+	}
+
+	public static List<ReservaHotel> porDataEntrada(Date dataEntrada)
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    Query q = s.createQuery("from ReservaHotel where dataEntrada=:dataEntrada");
+	    List l = q.setParameter("dataEntrada", dataEntrada).list();
+	    List<ReservaHotel> ret = new ArrayList<ReservaHotel>(l.size());
+	    for (Object o : l) ret.add((ReservaHotel) o);
+	    s.getTransaction().commit();
+	    return ret;
+	}
+
+	public static List<ReservaHotel> porDataSaida(Date dataSaida)
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    Query q = s.createQuery("from ReservaHotel where dataSaida=:dataSaida");
+	    List l = q.setParameter("dataSaida", dataSaida).list();
+	    List<ReservaHotel> ret = new ArrayList<ReservaHotel>(l.size());
+	    for (Object o : l) ret.add((ReservaHotel) o);
+	    s.getTransaction().commit();
+	    return ret;
+	}
+
+	public static List<ReservaHotel> porHospedesQuarto(int hospedesQuarto)
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    Query q = s.createQuery("from ReservaHotel where hospedesQuarto=:hospedesQuarto");
+	    List l = q.setParameter("hospedesQuarto", hospedesQuarto).list();
+	    List<ReservaHotel> ret = new ArrayList<ReservaHotel>(l.size());
+	    for (Object o : l) ret.add((ReservaHotel) o);
+	    s.getTransaction().commit();
+	    return ret;
+	}
+
+	public static List<ReservaHotel> porId(int id)
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    Query q = s.createQuery("from ReservaHotel where id=:id");
+	    List l = q.setParameter("id", id).list();
+	    List<ReservaHotel> ret = new ArrayList<ReservaHotel>(l.size());
+	    for (Object o : l) ret.add((ReservaHotel) o);
+	    s.getTransaction().commit();
+	    return ret;
+	}
+
+	public static List<ReservaHotel> porPreco(double preco)
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    Query q = s.createQuery("from ReservaHotel where preco=:preco");
+	    List l = q.setParameter("preco", preco).list();
+	    List<ReservaHotel> ret = new ArrayList<ReservaHotel>(l.size());
+	    for (Object o : l) ret.add((ReservaHotel) o);
+	    s.getTransaction().commit();
+	    return ret;
+	}
+
+	public void salvar()
+	{
+	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+	    s.beginTransaction();
+	    s.save(this);
+	    s.getTransaction().commit();
+	}
+
+
+
 }

@@ -64,9 +64,7 @@ public class Pacote
         return this.passeios;
     }
 
-<<<<<<< HEAD
-=======
-    // Começo do código autogerado
+	// Começo do código autogerado
     // Mon Nov 28 14:07:31 2011
     public static List<Pacote> porDestino(String destino)
     {
@@ -79,7 +77,6 @@ public class Pacote
         s.getTransaction().commit();
         return ret;
     }
->>>>>>> 421767fd6b7c51f12e9954282d3d5e1822d55724
 
     public static List<Pacote> porId(int id)
     {
@@ -124,13 +121,5 @@ public class Pacote
         s.save(this);
         s.getTransaction().commit();
     }
-<<<<<<< HEAD
-
-<<<<<<< HEAD
-
-=======
-=======
->>>>>>> 421767fd6b7c51f12e9954282d3d5e1822d55724
-    // Fim do código autogerado
->>>>>>> 390c92626b71c0c5fbbb015d065b5213cbe615ac
+// Fim do código autogerado
 }

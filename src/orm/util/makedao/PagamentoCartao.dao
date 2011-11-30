@@ -1,0 +1,10 @@
+PagamentoCartao	
+int codigoPagamento
+double preco
+boolean estado
+Pacote pacote
+int numeroCartao
+String proprietario
+String bandeira
+int codigoSeguranca
+Date dataVencimento

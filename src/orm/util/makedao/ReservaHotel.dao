@@ -1,0 +1,9 @@
+ReservaHotel
+String hotel
+int quarto
+int numeroEstrelas
+Date dataEntrada
+Date dataSaida
+int hospedesQuarto
+int id
+double preco

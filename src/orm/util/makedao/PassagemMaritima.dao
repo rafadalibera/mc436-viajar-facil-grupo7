@@ -1,0 +1,9 @@
+PassagemMaritima
+int id
+String destino
+String origem
+int data
+double preco
+String porto
+String companhia_maritima
+String cabine
