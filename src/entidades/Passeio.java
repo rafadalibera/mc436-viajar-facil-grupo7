@@ -16,9 +16,9 @@ public class Passeio
     private int numeroVagas;
     private Date data;
     private String local;
-    private boolean reservado;
     private int totalPessoas;
     private String infoPasseio;
+    private boolean reservado = false;
 
     public Passeio()
     {
@@ -115,8 +115,3 @@ public class Passeio
     }
 
 }
-<<<<<<< HEAD
-
-=======
->>>>>>> 90c15322fa267fca970b61a14cb91ada38d41602
->>>>>>> 390c92626b71c0c5fbbb015d065b5213cbe615ac

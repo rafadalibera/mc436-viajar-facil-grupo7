@@ -10,27 +10,24 @@ import orm.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Query;
 
-<<<<<<< HEAD
-public class Pacote {
-
-=======
 public class Pacote 
 {
->>>>>>> 390c92626b71c0c5fbbb015d065b5213cbe615ac
     private int id;
+    public String destino;
     private Date dataIda;
     private Date dataVolta;
     private double preco;
     private String infoDestino;
     private Set<Passeio> passeios;
 
-    Pacote()
+    public Pacote()
     {
     }
 
-    Pacote(int id, Date dataIda, Date dataVolta, double preco, String infoDestino)
+    Pacote(int id, String destino, Date dataIda, Date dataVolta, double preco, String infoDestino)
     {
         this.id = id;
+        this.destino = destino;
         this.dataIda = dataIda;
         this.dataVolta = dataVolta;
         this.preco = preco;
@@ -67,6 +64,22 @@ public class Pacote
         return this.passeios;
     }
 
+<<<<<<< HEAD
+=======
+    // Começo do código autogerado
+    // Mon Nov 28 14:07:31 2011
+    public static List<Pacote> porDestino(String destino)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Pacote where destino=:destino");
+        List l = q.setParameter("destino", destino).list();
+        List<Pacote> ret = new ArrayList<Pacote>(l.size());
+        for (Object o : l) ret.add((Pacote) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+>>>>>>> 421767fd6b7c51f12e9954282d3d5e1822d55724
 
     public static List<Pacote> porId(int id)
     {
@@ -111,10 +124,13 @@ public class Pacote
         s.save(this);
         s.getTransaction().commit();
     }
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 
 =======
+=======
+>>>>>>> 421767fd6b7c51f12e9954282d3d5e1822d55724
     // Fim do código autogerado
 >>>>>>> 390c92626b71c0c5fbbb015d065b5213cbe615ac
 }
