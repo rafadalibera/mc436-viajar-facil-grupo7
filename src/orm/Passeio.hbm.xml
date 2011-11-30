@@ -9,10 +9,9 @@
 			<generator class="increment"/>
 		</id>
 
-		<property name="numeroVagas" />
 		<property name="data" />
 		<property name="local" />
-		<property name="totalPessoas" />
 		<property name="infoPasseio" />
+		<property name="preco" />
 	</class>
 </hibernate-mapping>
