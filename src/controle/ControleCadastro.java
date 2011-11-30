@@ -55,10 +55,12 @@ public class ControleCadastro
         return sb.toString();
     }
 
-    public boolean cadastrarCliente(int id, int numero_cartao, String nome, String senha,
+    public boolean cadastrarCliente(int numero_cartao, String nome, String senha,
             String rg, String cpf, String email,
             HashSet<String> telefones)
     {
+        int id = Cliente.maiorId() + 1;
+
         //Cria o objeto cliente que será salvo no banco de dados
         Cliente cliente = new Cliente(id,
                                       numero_cartao,
