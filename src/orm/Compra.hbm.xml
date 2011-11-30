@@ -9,10 +9,10 @@
 			<generator class="increment"/>
 		</id>
 
+		<property name="id" />		
 		<property name="pacote" />
 		<property name="guia" />
 		<property name="pagamento" />
-		<property name="passeioAdicional" />
 		<property name="hotel" />
 
 		<set lazy="false" name="passagens" table="compra_passagem">
@@ -20,9 +20,9 @@
 			<many-to-many column="passagem_id" class="Passagem" />
 		</set>
 
-		<set lazy="false" name="passeios" table="compra_passeios">
+		<!-- <set lazy="false" name="passeios" table="compra_passeios">
 			<key column="compra_id" />
-			<many-to-many column="passeio_id" class="Passeio" />
-		</set>
+			<many-to-many column="passeio_id" class="Passeio" /> 
+		</set> -->
 	</class>
 </hibernate-mapping>

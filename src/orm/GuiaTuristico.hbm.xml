@@ -5,7 +5,7 @@
 
 <hibernate-mapping package="entidades" default-access="field">
 	<class name="GuiaTuristico" table="GuiaTuristico">
-		<id name="id" column="_id">
+		<id name="id" column="guia_id">
 			<generator class="increment"/>
 		</id>
 
@@ -13,11 +13,8 @@
 		<property name="telefone" />
 		<property name="email" />
 		<property name="localidade" />
+		<property name="lingua_falada" />
 
-		<set lazy="false" name="linguas" table="guia_linguas">
-			<key column="guia_turistico_id" />
-			<element type="string" column="lingua" />
-		</set>
 	</class>
 
 </hibernate-mapping>
