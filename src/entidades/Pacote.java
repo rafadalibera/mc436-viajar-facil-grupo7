@@ -24,7 +24,7 @@ public class Pacote
     {
     }
 
-    Pacote(int id, String destino, int anoIda, int mesIda, int diaIda, 
+    public Pacote(int id, String destino, int anoIda, int mesIda, int diaIda, 
            int anoVolta, int mesVolta, int diaVolta, double preco, String infoDestino)
     {
         this.id = id;
