@@ -1,5 +1,15 @@
 package entidades;
 
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.ArrayList;
+
+import org.hibernate.Session;
+import org.hibernate.Query;
+
+import orm.util.HibernateUtil;
+
 public class GuiaTuristico
 {
     private int id;

@@ -1,5 +1,15 @@
 package entidades; 
 
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.ArrayList;
+
+import org.hibernate.Session;
+import org.hibernate.Query;
+
+import orm.util.HibernateUtil;
+
 public class Passagem 
 {
 	private int id;
@@ -39,6 +49,7 @@ public class Passagem
 		return preco;
 	}
 
+/*
 	public static List<Passagem> porId(int id)
 	{
 	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -106,6 +117,6 @@ public class Passagem
 	    s.save(this);
 	    s.getTransaction().commit();
 	}
-
+*/
 	
 }

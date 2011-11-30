@@ -2,6 +2,16 @@ package entidades;
 
 import java.util.List;
 
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.ArrayList;
+
+import org.hibernate.Session;
+import org.hibernate.Query;
+
+import orm.util.HibernateUtil;
+
 public class Compra 
 {
 	private int id;
@@ -14,13 +24,13 @@ public class Compra
 	
 	// Construtor basico //
 	Compra(int id, Pacote pacote, GuiaTuristico guia, Pagamento pagamento, 
-			Passeio passeioAdicional, List<Passagem> ListaPassagem, ReservaHotel hotel)
+			List<Passeio> passeioAdicional, List<Passagem> ListaPassagem, ReservaHotel hotel)
 	{
 		this.id = id;
 		this.pacote = pacote;
 		this.guia = guia;
 		this.pagamento = pagamento;
-		this.passeioAdicional = passeioAdicional;
+		this.passeios = passeioAdicional;
 		this.ListaPassagem = ListaPassagem;
 		this.hotel = hotel;
 	}

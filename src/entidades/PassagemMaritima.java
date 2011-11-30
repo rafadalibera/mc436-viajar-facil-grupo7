@@ -2,6 +2,16 @@ package entidades;
 
 import entidades.Passagem;
 
+import java.util.List;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.ArrayList;
+
+import org.hibernate.Session;
+import org.hibernate.Query;
+
+import orm.util.HibernateUtil;
+
 public class PassagemMaritima extends Passagem 
 {
 	private String porto;

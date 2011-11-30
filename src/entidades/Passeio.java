@@ -115,8 +115,4 @@ public class Passeio
     }
 
 }
-<<<<<<< HEAD
 
-=======
->>>>>>> 90c15322fa267fca970b61a14cb91ada38d41602
->>>>>>> 390c92626b71c0c5fbbb015d065b5213cbe615ac
