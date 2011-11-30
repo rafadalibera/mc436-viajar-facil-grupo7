@@ -18,19 +18,16 @@ public class Compra
 	private Pacote pacote;
 	private GuiaTuristico guia;
 	private Pagamento pagamento;
-	private List<Passeio> passeios;
 	private List<Passagem> ListaPassagem;
 	private ReservaHotel hotel;
 	
 	// Construtor basico //
-	Compra(int id, Pacote pacote, GuiaTuristico guia, Pagamento pagamento, 
-			List<Passeio> passeioAdicional, List<Passagem> ListaPassagem, ReservaHotel hotel)
+	Compra(int id, Pacote pacote, GuiaTuristico guia, Pagamento pagamento, List<Passagem> ListaPassagem, ReservaHotel hotel)
 	{
 		this.id = id;
 		this.pacote = pacote;
 		this.guia = guia;
 		this.pagamento = pagamento;
-		this.passeios = passeioAdicional;
 		this.ListaPassagem = ListaPassagem;
 		this.hotel = hotel;
 	}
@@ -50,10 +47,6 @@ public class Compra
 
 	public Pagamento getPagamento() {
 		return pagamento;
-	}
-
-	public List<Passeio> getPasseios() {
-		return passeios;
 	}
 
 	public List<Passagem> getListaPassagem() {
