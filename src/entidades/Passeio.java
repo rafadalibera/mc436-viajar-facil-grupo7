@@ -13,45 +13,35 @@ import orm.util.HibernateUtil;
 public class Passeio 
 {
     private int id;
-    private int numeroVagas;
+    private double preco;
     private Date data;
     private String local;
-    private int totalPessoas;
     private String infoPasseio;
-    private boolean reservado = false;
+    private boolean habilitado;
 
     public Passeio()
     {
     }
 
-    public Passeio(int id, int numeroVagas, Date data, String local,
-            boolean reservado, int totalPessoas, String infoPasseio)
+    public Passeio(int id, String local, int ano, int mes, int dia
+            boolean habilitado, String infoPasseio, double preco)
     {
         this.id = id;
-        this.numeroVagas = numeroVagas;
         this.data = data;
         this.local = local;
-        this.reservado = reservado;
-        this.totalPessoas = totalPessoas;
+        this.habilitado = habilitado;
         this.infoPasseio = infoPasseio;
+	this.preco = preco;
+	this.habilitado = false;
+	this.Date = new Date(ano,mes,dia);
     }
 
     public int getId() {
         return id;
     }
 
-    public int getNumeroVagas() {
-        return numeroVagas;
-    }
-
-    public void somaPassageiros(int nPassageiros) {
-        numeroVagas -= nPassageiros;
-        totalPessoas += nPassageiros;
-    }
-
-    public void diminuiPassageiros(int nPassageiros) {
-        numeroVagas += nPassageiros;
-        totalPessoas -= nPassageiros;
+    public int getpreco() {
+        return preco;
     }
 
     public Date getData() {
@@ -62,21 +52,13 @@ public class Passeio
         return local;
     }
 
-    public boolean isReservado() {
-        return reservado;
+    public boolean checkHabilitado() {
+        return habilitado;
     }
 
-    public void setReservado(boolean reservado) {
-        this.reservado = reservado;
-    }
-
-    public int getTotalPessoas() {
-        return totalPessoas;
-    }
-
-    public void setTotalPessoas(int totalPessoas) {
-        this.totalPessoas = totalPessoas;
-    }
+    public void habilita() {
+        this.habilita = true;
+    
 
     public String getInfoPasseio() {
         return infoPasseio;

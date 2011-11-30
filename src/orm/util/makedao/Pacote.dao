@@ -1,4 +1,5 @@
 Pacote
+String destino
 int id
 Date dataIda
 Date dataVolta

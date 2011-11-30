@@ -18,9 +18,10 @@ public class PassagemMaritima extends Passagem
 	private String companhia_maritima;
 	private String cabine;
 	
-	public PassagemMaritima (int id, String destino, String origem, int data, int preco, String porto, String companhia_maritima, String cabine)
+	public PassagemMaritima (int id, String destino, String origem, int ano, int mes, int dia, int preco, 
+                                 String porto, String companhia_maritima, String cabine)
 	{
-		super(id, destino, origem, data, preco);
+		super(id, destino, origem, ano, mes, dia, preco);
 		
 		this.porto = porto;
 		this.companhia_maritima = companhia_maritima;

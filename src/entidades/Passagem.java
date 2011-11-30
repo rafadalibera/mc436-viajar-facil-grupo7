@@ -15,16 +15,16 @@ public class Passagem
 	private int id;
 	private String destino;
 	private String origem;
-	private int data;
+	private Date data;
 	private double preco;
 	
 	// Construtor Basico //
-	public Passagem(int id, String destino, String origem, int data, double preco)
+	public Passagem(int id, String destino, String origem, int ano, int mes,int dia, double preco)
 	{
 		this.id = id;
 		this.destino = destino;
 		this.origem = origem;
-		this.data = data;
+		this.data = new Date(ano,mes,dia);
 		this.preco = preco;
 	}
 
@@ -41,7 +41,7 @@ public class Passagem
 		return origem;
 	}
 
-	public int getData() {
+	public Date getData() {
 		return data;
 	}
 

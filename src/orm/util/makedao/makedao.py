@@ -51,6 +51,21 @@ def emitir_salvar():
     print "}"
     print
 
+def emitir_maior_id():
+    print "public static int maiorId()"
+    print "{"
+
+    corpo = ("Session s = HibernateUtil.getSessionFactory().getCurrentSession();",
+             "s.beginTransaction();",
+             'Query q = s.createQuery("select max(id) from %s");' % (tabela),
+             "return (Integer) q.list().get(0);")
+
+    for linha in corpo:
+        print INDENT + linha
+
+    print "}"
+    print
+
 if __name__ == "__main__":
     if len(sys.argv) < 2:
         print >>sys.stderr, "Uso: %s <arquivo>.dao" % sys.argv[0]
@@ -67,6 +82,8 @@ if __name__ == "__main__":
 
     for tipo, nome in campos:
         emitir_getter(classe, tabela, tipo, nome)
+        if nome == "id":
+            emitir_maior_id()
 
     emitir_salvar()
     print "// Fim do código autogerado"

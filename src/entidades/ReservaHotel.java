@@ -24,14 +24,14 @@ public class ReservaHotel
 	private double preco;
 	
 	// Construtor basico //
-	ReservaHotel(String hotel, int quarto, int numeroEstrelas, Date dataEntrada,
-			     Date dataSaida, int hospedesQuarto, int id, double preco)
+	ReservaHotel(String hotel, int quarto, int numeroEstrelas, int anoEntrada, int mesEntrada, int diaEntrada,
+		     int anoSaida, int mesSaida, int diaSaida, int hospedesQuarto, int id, double preco)
 	{
 		this.hotel = hotel;
 		this.quarto = quarto;
 		this.numeroEstrelas = numeroEstrelas;
-		this.dataEntrada = dataEntrada;
-		this.dataSaida = dataSaida;
+		this.dataEntrada = new Date(anoEntrado, mesEntrada, diaEntrada);
+		this.dataSaida = new Date(anoSaida, mesSaida, diaSaida);
 		this.hospedesQuarto = hospedesQuarto;
 		this.preco = preco;
 		this.id = id;		

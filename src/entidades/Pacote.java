@@ -10,25 +10,27 @@ import orm.util.HibernateUtil;
 import org.hibernate.Session;
 import org.hibernate.Query;
 
-
 public class Pacote 
 {
     private int id;
+    public String destino;
     private Date dataIda;
     private Date dataVolta;
     private double preco;
     private String infoDestino;
     private Set<Passeio> passeios;
 
-    Pacote()
+    public Pacote()
     {
     }
 
-    Pacote(int id, Date dataIda, Date dataVolta, double preco, String infoDestino)
+    Pacote(int id, String destino, int anoIda, int mesIda, int diaIda, 
+           int anoVolta, int mesVolta, int diaVolta, double preco, String infoDestino)
     {
         this.id = id;
-        this.dataIda = dataIda;
-        this.dataVolta = dataVolta;
+        this.destino = destino;
+        this.dataIda = new Date(anoIda,mesIda,diaIda);
+        this.dataVolta = new Data(anoVolta,mesVolta,diaVolta);
         this.preco = preco;
         this.infoDestino = infoDestino;
         this.passeios = new HashSet<Passeio>() ;
@@ -63,6 +65,19 @@ public class Pacote
         return this.passeios;
     }
 
+	// Começo do código autogerado
+    // Mon Nov 28 14:07:31 2011
+    public static List<Pacote> porDestino(String destino)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Pacote where destino=:destino");
+        List l = q.setParameter("destino", destino).list();
+        List<Pacote> ret = new ArrayList<Pacote>(l.size());
+        for (Object o : l) ret.add((Pacote) o);
+        s.getTransaction().commit();
+        return ret;
+    }
 
     public static List<Pacote> porId(int id)
     {
@@ -107,5 +122,5 @@ public class Pacote
         s.save(this);
         s.getTransaction().commit();
     }
-
+// Fim do código autogerado
 }
