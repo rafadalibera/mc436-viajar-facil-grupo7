@@ -20,6 +20,10 @@ public class Compra
 	private Pagamento pagamento;
 	private List<Passagem> ListaPassagem;
 	private ReservaHotel hotel;
+
+    public Compra()
+    {
+    }
 	
 	// Construtor basico //
 	Compra(int id, Pacote pacote, GuiaTuristico guia, Pagamento pagamento, List<Passagem> ListaPassagem, ReservaHotel hotel)
