@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entidades" default-access="field">
+	<class name="ReservaHotel" table="ReservaHotel">
+		<id name="id" column="hotel_id">
+			<generator class="increment"/>
+		</id>
+
+		<property name="hotel" />
+		<property name="quarto" />
+		<property name="numeroEstrelas" />
+		<property name="dataEntrada" />
+		<property name="dataSaida" />
+		<property name="hospedesQuarto" />
+		<property name="id" />
+		<property name="preco" />
+
+	</class>
+
+</hibernate-mapping>

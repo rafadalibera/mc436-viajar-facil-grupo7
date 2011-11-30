@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping package="entidades" default-access="field">
+	<class name="Compra" table="Compra">
+		<id name="id" column="compra_id">
+			<generator class="increment"/>
+		</id>
+
+		<property name="pacote" />
+		<property name="guia" />
+		<property name="pagamento" />
+		<property name="passeioAdicional" />
+		<property name="hotel" />
+
+		<set lazy="false" name="passagens" table="compra_passagem">
+			<key column="compra_id" />
+			<many-to-many column="passagem_id" class="Passagem" />
+		</set>
+
+		<set lazy="false" name="passeios" table="compra_passeios">
+			<key column="compra_id" />
+			<many-to-many column="passeio_id" class="Passeio" />
+		</set>
+	</class>
+</hibernate-mapping>
