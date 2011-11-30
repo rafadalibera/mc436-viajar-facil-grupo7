@@ -61,6 +61,10 @@ public class ControleCadastro
     {
         int id = Cliente.maiorId() + 1;
 
+        if (Cliente.porEmail(email).size() > 0) {
+            return false; // cliente já existe
+        }
+
         //Cria o objeto cliente que será salvo no banco de dados
         Cliente cliente = new Cliente(id,
                                       numero_cartao,
