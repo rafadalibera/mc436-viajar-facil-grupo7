@@ -19,7 +19,10 @@ public class PassagemAerea extends Passagem
 	private String companhia_aerea;
 	private String poltrona;
 	
-	public PassagemAerea (int id, String destino, String origem, int ano, int mes, int dia, int preco, String aeroporto, int portao_embarque, String companhia_aerea,String poltrona)
+	public PassagemAerea (int id, String destino, String origem, int ano, 
+			      int mes, int dia, int preco, String aeroporto, 
+                              int portao_embarque, String companhia_aerea,
+			      String poltrona)
 	{
 		super(id, destino, origem, ano, mes, dia, preco);
 		
