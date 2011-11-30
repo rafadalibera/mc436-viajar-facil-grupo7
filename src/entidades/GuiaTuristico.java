@@ -14,12 +14,12 @@ public class GuiaTuristico
 {
     private int id;
     private String nome;
-    private int telefone;
+    private String telefone;
     private String email;
     private String localidade;
     private String lingua_falada;
 
-    public GuiaTuristico (int id, String nome, int telefone, String email, String localidade, String lingua_falada)
+    public GuiaTuristico (int id, String nome, String telefone, String email, String localidade, String lingua_falada)
     {
     	this.id = id;
     	this.nome = nome;
@@ -39,7 +39,7 @@ public class GuiaTuristico
     	return this.nome;
     }
 
-    public int getTelefone ()
+    public String getTelefone ()
     {
     	return this.telefone;
     }

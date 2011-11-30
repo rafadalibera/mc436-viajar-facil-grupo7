@@ -13,11 +13,7 @@
 		<property name="telefone" />
 		<property name="email" />
 		<property name="localidade" />
-
-		<set lazy="false" name="linguas" table="guia_linguas">
-			<key column="guia_turistico_id" />
-			<element type="string" column="lingua" />
-		</set>
+		<property name="lingua_falada" />
 	</class>
 
 </hibernate-mapping>
