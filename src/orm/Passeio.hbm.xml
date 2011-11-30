@@ -12,6 +12,5 @@
 		<property name="data" />
 		<property name="local" />
 		<property name="infoPasseio" />
-		<property name="preco" />
 	</class>
 </hibernate-mapping>

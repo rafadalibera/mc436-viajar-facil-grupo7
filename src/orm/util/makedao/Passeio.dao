@@ -1,3 +1,7 @@
 Passeio
 int id
+double preco
+Date data
 String local
+String infoPasseio
+boolean habilitado

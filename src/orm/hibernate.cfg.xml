@@ -31,8 +31,15 @@
 		<mapping resource="orm/Cliente.hbm.xml"/>
 		<mapping resource="orm/Passeio.hbm.xml"/>
 		<mapping resource="orm/Pacote.hbm.xml"/>
+		<mapping resource="orm/Compra.hbm.xml"/>
 		<mapping resource="orm/GuiaTuristico.hbm.xml"/>
-
+		<mapping resource="orm/Pagamento.hbm.xml"/>
+		<mapping resource="orm/PagamentoBoleto.hbm.xml"/>
+		<mapping resource="orm/PagamentoCartao.hbm.xml"/>
+		<mapping resource="orm/Passagem.hbm.xml"/>
+		<mapping resource="orm/PassagemAerea.hbm.xml"/>
+		<mapping resource="orm/PassagemMaritima.hbm.xml"/>
+		<mapping resource="orm/ReservaHotel.hbm.xml"/>
 
 	</session-factory>
 </hibernate-configuration>

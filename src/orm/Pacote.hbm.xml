@@ -9,10 +9,11 @@
 			<generator class="increment"/>
 		</id>
 
+		<property name="destino" />		
 		<property name="dataIda" />
 		<property name="dataVolta" />
 		<property name="preco" />
-		<property name="infoDestino" />
+		<property name="infoDestino"/>
 
 		<set lazy="false" name="passeios" table="pacote_passeios">
 			<key column="pacote_id" />

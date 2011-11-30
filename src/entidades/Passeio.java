@@ -68,8 +68,40 @@ public class Passeio
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         s.beginTransaction();
-        Query q = s.createQuery("from Passeio where id=?");
-        List l = q.setString(0, String.format("%s", id)).list();
+        Query q = s.createQuery("from Passeio where id=:id");
+        List l = q.setParameter("id", id).list();
+        List<Passeio> ret = new ArrayList<Passeio>(l.size());
+        for (Object o : l) ret.add((Passeio) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public static int maiorId()
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("select max(id) from Passeio");
+        return (Integer) q.list().get(0);
+    }
+
+    public static List<Passeio> porPreco(double preco)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Passeio where preco=:preco");
+        List l = q.setParameter("preco", preco).list();
+        List<Passeio> ret = new ArrayList<Passeio>(l.size());
+        for (Object o : l) ret.add((Passeio) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public static List<Passeio> porData(Date data)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Passeio where data=:data");
+        List l = q.setParameter("data", data).list();
         List<Passeio> ret = new ArrayList<Passeio>(l.size());
         for (Object o : l) ret.add((Passeio) o);
         s.getTransaction().commit();
@@ -80,8 +112,32 @@ public class Passeio
     {
         Session s = HibernateUtil.getSessionFactory().getCurrentSession();
         s.beginTransaction();
-        Query q = s.createQuery("from Passeio where local=?");
-        List l = q.setString(0, String.format("%s", local)).list();
+        Query q = s.createQuery("from Passeio where local=:local");
+        List l = q.setParameter("local", local).list();
+        List<Passeio> ret = new ArrayList<Passeio>(l.size());
+        for (Object o : l) ret.add((Passeio) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public static List<Passeio> porInfoPasseio(String infoPasseio)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Passeio where infoPasseio=:infoPasseio");
+        List l = q.setParameter("infoPasseio", infoPasseio).list();
+        List<Passeio> ret = new ArrayList<Passeio>(l.size());
+        for (Object o : l) ret.add((Passeio) o);
+        s.getTransaction().commit();
+        return ret;
+    }
+
+    public static List<Passeio> porHabilitado(boolean habilitado)
+    {
+        Session s = HibernateUtil.getSessionFactory().getCurrentSession();
+        s.beginTransaction();
+        Query q = s.createQuery("from Passeio where habilitado=:habilitado");
+        List l = q.setParameter("habilitado", habilitado).list();
         List<Passeio> ret = new ArrayList<Passeio>(l.size());
         for (Object o : l) ret.add((Passeio) o);
         s.getTransaction().commit();
@@ -95,6 +151,7 @@ public class Passeio
         s.save(this);
         s.getTransaction().commit();
     }
+
 
 }
 

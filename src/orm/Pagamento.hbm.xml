@@ -9,10 +9,21 @@
 			<generator class="increment"/>
 		</id>
 
+		<property name="id" />		
 		<property name="preco" />
 		<property name="codigoPagamento" />
 		<property name="estado" />
-		<property name="Pacote"/>
+		
+		<many-to-one name="pacote"  column="pacote_id" update="false"/>	
+
+<!--	<property name="pacote"/>		
+		
+		<set lazy="false" name="pacotes" table="pagamento_pacotes">
+			<key column="pacote_id" />
+			<many-to-many column="pacote_id" class="Pacote" /> 
+		</set>
+-->
+
 		
 	</class>
 </hibernate-mapping>

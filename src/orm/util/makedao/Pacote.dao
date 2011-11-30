@@ -3,3 +3,5 @@ String destino
 int id
 Date dataIda
 Date dataVolta
+double preco
+String infoDestino
