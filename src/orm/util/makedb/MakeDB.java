@@ -194,7 +194,7 @@ public class MakeDB
 
             doc.getDocumentElement().normalize();
 
-            // criaPasseios deve ser chamado antes de criaGuias
+            // criaPasseios deve ser chamado antes de criaPacotes
             criaPasseios(doc);
             criaPacotes(doc);
             criaGuias(doc);
