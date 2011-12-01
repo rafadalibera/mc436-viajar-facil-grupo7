@@ -9,19 +9,34 @@
 			<generator class="increment"/>
 		</id>
 
-		<property name="pacote" />
-		<property name="guia" />
-		<property name="pagamento" />
-		<property name="hotel" />
+		
+		<set lazy="false" name="hotel" table="compra_hotel">
+			<key column="compra_id" />
+			<many-to-many column="hotel_id" class="ReservaHotel" />
+		</set>
+		
 
-		<set lazy="false" name="passagens" table="compra_passagem">
+		<set lazy="false" name="pagamento" table="compra_pagamento">
+			<key column="compra_id" />
+			<many-to-many column="pagamento_id" class="Pagamento" />
+		</set>
+		
+
+		<set lazy="false" name="guia" table="compra_guia">
+			<key column="compra_id" />
+			<many-to-many column="guia_id" class="GuiaTuristico" />
+		</set>
+
+		<set lazy="false" name="pacote" table="compra_pacote">
+			<key column="compra_id" />
+			<many-to-many column="pacote_id" class="Pacote" />
+		</set>
+		
+
+		<set lazy="false" name="ListaPassagem" table="compra_passagem">
 			<key column="compra_id" />
 			<many-to-many column="passagem_id" class="Passagem" />
 		</set>
 
-		<set lazy="false" name="passeios" table="compra_passeios">
-			<key column="compra_id" />
-			<many-to-many column="passeio_id" class="Passeio" />
-		</set>
 	</class>
 </hibernate-mapping>

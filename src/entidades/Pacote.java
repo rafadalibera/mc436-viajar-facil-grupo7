@@ -175,8 +175,8 @@ public class Pacote
     	c2.salvar();
     	
     	Pacote p = new Pacote(0,"SP",2010,12,10,2011,01,21,23.44,"San Pablo destino muito loco");
-    	Passeio pass = new Passeio(1,"SP",2010,12,10,false,"passeio no parque",99.99);
-    	Passeio pass2 = new Passeio(2,"SP",2012,12,10,false,"passeio no lago",98.99);
+    	Passeio pass = new Passeio(0, "SP", 2010, 10, 14,"passeio muito longo", 5);
+    	Passeio pass2 = new Passeio(0, "SP", 2010, 11, 07 ,"passeio muito curto", 5);
     	pass.salvar();
     	pass2.salvar();
     	
@@ -189,26 +189,43 @@ public class Pacote
     	
     	p.salvar();
     	
-    	//Pacote p2 = new Pacote(0,"RJ",2011,12,10,2012,01,21,43.29,"Rio de la Janero destino muito loco");
-    	//p2.addPasseio(lpass.get(0));
-    	//p2.salvar();
+    	Pacote p2 = new Pacote(0,"RJ",2011,12,10,2012,01,21,43.29,"Rio de la Janero destino muito loco");
+    	p2.addPasseio(pass);
+    	p2.salvar();
     	
-    //	GuiaTuristico g = new GuiaTuristico(0, "Guia", 05515, "email@10.com", "brasil", "portunhol");
-    //	g.salvar();
-   //	GuiaTuristico g2 = new GuiaTuristico(1, "Senhor guia", 05515, "a_oemail@10.com", "argentina", "portunhol");
-   // 	g2.salvar();
-  //  	List<GuiaTuristico> lg = GuiaTuristico.porLinguaFalada("portunhol");
-    	//for (GuiaTuristico gg : lg)
-    	//{
-    //		System.out.println("Nome dos Guias:   "+gg.getNome());
-    //	}
+    	GuiaTuristico g = new GuiaTuristico(0, "NomeGuia", "telGuia123", "guia@email.com", "brasil", "portunhol");
+    	g.salvar();
+   		GuiaTuristico g2 = new GuiaTuristico(1, "Senhor guia", "05515", "a_oemail@10.com", "argentina", "portunhol");
+  	 	g2.salvar();
+    	List<GuiaTuristico> lg = GuiaTuristico.porLinguaFalada("portunhol");
+    	for (GuiaTuristico gg : lg)
+    	{
+   		System.out.println("Nome dos Guias:   "+gg.getNome());
+    	}
        
-    	/*PagamentoBoleto pagbol = new PagamentoBoleto(p, 99.99, 32, 45);
-    	pagbol.salvar();
-    	List<PagamentoBoleto> pb = PagamentoBoleto.porCodigoPagamento(32);
-    	for(PagamentoBoleto pbol :pb){
-    		System.out.println(pbol.getPacote().getInfoDestino());
-    	}*/
+/*
+		PassagemMaritima passmar = new PassagemMaritima(47, "Santos", "Salvador", 2010, 2, 8, 15,"porto", "naufragos SA", 25);
+		passmar.salvar();
+		List<Passagem> listapassagem= new ArrayList<Passagem>();
+		listapassagem.add(passmar);		
+
+		ReservaHotel hotel =  new ReservaHotel("hotel 5 estrelas", 25, 5, 2010, 10, 04,     2011, 2, 3, 2, 2, 29.90);
+		hotel.salvar();
+		PagamentoBoleto pagbol = new PagamentoBoleto(p,20,10,15);
+		pagbol.salvar();
+		
+
+		Compra compra = new Compra(0, p, g, pagbol, listapassagem, hotel);
+		compra.salvar();
+		
+		List<Compra> listacompra = Compra.porGuia(g);
+		for(Compra cmp : listacompra)
+		{
+			System.out.println("Nome do Guia:   "+cmp.getGuia().getNome());
+			System.out.println("Inf do Destino:   "+cmp.getPacote().getInfoDestino());
+		}
+*/
+    	
     
     }
 }

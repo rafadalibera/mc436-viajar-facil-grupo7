@@ -12,7 +12,11 @@
 		<property name="preco" />
 		<property name="codigoPagamento" />
 		<property name="estado" />
-		<property name="pacote"/>
+		
+	<set lazy="false" name="pacote" table="pagamento_pacote">
+			<key column="pagamento_id" />
+			<many-to-many column="pacote_id" class="Pacote" />
+		</set>
 		
 	</class>
 </hibernate-mapping>
