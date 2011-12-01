@@ -6,10 +6,10 @@
 <hibernate-mapping package="entidades" default-access="field">
 	<class name="Pacote" table="Pacote">
 		<id name="id" column="pacote_id">
-			<generator class="increment"/>
+			<generator class="assigned"/>
 		</id>
 
-		<property name="destino" />		
+		<property name="destino" />
 		<property name="dataIda" />
 		<property name="dataVolta" />
 		<property name="preco" />
