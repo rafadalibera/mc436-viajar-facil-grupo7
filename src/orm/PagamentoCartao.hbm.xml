@@ -18,11 +18,7 @@
 		<property name="codigoSeguranca"/>
 		<property name="dataVencimento"/>
 
-		<set lazy="false" name="pacote" table="pagamentoCartao_pacote">
-			<key column="pagamento_id" />
-			<many-to-many column="pacote_id" class="Pacote" />
-		</set>
-
+		<one-to-one name="pacote" class="Pacote"></one-to-one>
 
 	</class>
 </hibernate-mapping>
