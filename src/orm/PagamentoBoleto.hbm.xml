@@ -12,7 +12,7 @@
 		<property name="preco" />
 		<property name="codigoPagamento" />
 		<property name="estado" />
-		<property name="Pacote"/>
+		<property name="pacote"/>
 		<property name="numBoleto"/>
 
 		

@@ -171,7 +171,7 @@ public class MakeDB
             e = (Element) listaPorTag.item(0);
             local = ((Node) e.getChildNodes().item(0)).getNodeValue().trim();
 
-            // Local
+            // Lingua
             listaPorTag = ((Element) n).getElementsByTagName("lingua");
             e = (Element) listaPorTag.item(0);
             lingua = ((Node) e.getChildNodes().item(0)).getNodeValue().trim();
