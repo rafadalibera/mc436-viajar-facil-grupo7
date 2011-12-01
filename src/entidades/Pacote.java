@@ -202,30 +202,23 @@ public class Pacote
     	{
    		System.out.println("Nome dos Guias:   "+gg.getNome());
     	}
-       
-/*
+
 		PassagemMaritima passmar = new PassagemMaritima(47, "Santos", "Salvador", 2010, 2, 8, 15,"porto", "naufragos SA", 25);
 		passmar.salvar();
-		List<Passagem> listapassagem= new ArrayList<Passagem>();
-		listapassagem.add(passmar);		
 
 		ReservaHotel hotel =  new ReservaHotel("hotel 5 estrelas", 25, 5, 2010, 10, 04,     2011, 2, 3, 2, 2, 29.90);
 		hotel.salvar();
 		PagamentoBoleto pagbol = new PagamentoBoleto(p,20,10,15);
 		pagbol.salvar();
-		
 
-		Compra compra = new Compra(0, p, g, pagbol, listapassagem, hotel);
+		Compra compra = new Compra(0, p, g, pagbol, passmar, hotel);
 		compra.salvar();
-		
+
 		List<Compra> listacompra = Compra.porGuia(g);
 		for(Compra cmp : listacompra)
 		{
 			System.out.println("Nome do Guia:   "+cmp.getGuia().getNome());
 			System.out.println("Inf do Destino:   "+cmp.getPacote().getInfoDestino());
 		}
-*/
-    	
-    
     }
 }
