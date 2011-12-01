@@ -32,6 +32,139 @@
     <telefone>97624566</telefone>
     <email>padilha@gmail.com</email>
     <local>Maceió</local>
-    <lingua>Italiano</lingua>
+    <lingua>português</lingua>
 </guia>
+
+<pacote>
+    <id>11</id>
+    <dataIda dia="12" mes="01" ano="2012" />
+    <dataVolta dia="22" mes="01" ano="2012" />
+    <local>Nova York</local>
+    <info>Nova York parece uma velha conhecida mesmo para quem põe os pés nela pela primeira vez. Não há nenhuma outra cidade no mundo que possa rivalizar com sua fama. 
+
+Nova York é uma cidade de modas passageiras. O que hoje faz sucesso amanhã pode cair no esquecimento. A cidade retomou seu ritmo frenético de metrópole de todos os povos. As milhares de pessoas que passam diariamente pela estação do World Trade Center, no coração financeiro da Big Apple, parecem nem dar mais importância para o enorme buraco rodeado de guindastes. Estão olhando para o futuro, como sempre foi em Nova York, cidade de vanguarda. 
+
+Bem-cuidada, segura e cheia de opções de consumo e passeios, continua a ser a metrópole mais cosmopolita do planeta e uma das que mais atraem turistas e aventureiros</info>
+    <valor>2567.89</valor>
+    <passeio id="3" />
+    <passeio id="4" />
+</pacote>
+
+<passeio>
+    <id>3</id>
+    <data dia="14" mes="01" ano="2012" />
+    <local>Estatua da Liberdade</local>
+    <info>Passeio de barco e visita a uma das estátuas mais famosas do mundo.</info>
+    <valor>45.32</valor>
+</passeio>
+
+<passeio>
+    <id>4</id>
+    <data dia="15" mes="01" ano="2012" />
+    <local>Central parque</local>
+    <info>Vista ao maior parque da cidade, o passeio inclui um típico piquenique norte americano e passeio de charrete.</info>
+    <valor>35.32</valor>
+</passeio>
+
+<pacote>
+    <id>12</id>
+    <dataIda dia="6" mes="01" ano="2012" />
+    <dataVolta dia="23" mes="01" ano="2012" />
+    <local>Dubai</local>
+    <info>Há bem poucos anos Dubai não despertava sonho ou interesse em ninguém. Aliás, pouca gente tinha ouvido falar dessa cidade, um dos sete Emirados Árabes Unidos, no Oriente Médio.
+
+Para olhos ocidentais era apenas uma pequena interrogação fincada nas areias de um deserto sem fim onde nada poderia existir além de calor e pó. Nem mesmo a informação sobre as praias de águas muito azuis às margens do Golfo Pérsico ajudaria a convencer alguém a viajar para lá. Golfo Pérsico? Nos anos de 1990 esse nome soava algo como Faixa de Gaza ou sul do Líbano hoje em dia. 
+
+Mas as coisas mudaram por lá. E mudaram rápido. Em apenas três décadas Dubai passou de vilarejo de mercadores árabes a um dos destinos de luxo mais cobiçados do mundo. Não era nada e inventou-se completamente. Transformou-se num ícone de modernidade, onde prédios futuristas, shoppings gigantescos e hotéis sete estrelas brotaram das areias por onde circulavam apenas camelos. Dizem que tudo é possível em Dubai. Pode ser mesmo.</info>
+    <valor>4367.89</valor>
+    <passeio id="5" />
+    <passeio id="6" />
+</pacote>
+
+<passeio>
+    <id>5</id>
+    <data dia="15" mes="01" ano="2012" />
+    <local>Dubai</local>
+    <info>Tour com ônibus panorâmico que passa pelos principais pontos turísticos da cidades como o prédio mais alto do mundo, o hotel mais luxuoso do mundo e o shopping com pista de ski interna.</info>
+    <valor>35.32</valor>
+</passeio>
+
+<passeio>
+    <id>6</id>
+    <data dia="15" mes="01" ano="2012" />
+    <local>Dubai</local>
+    <info>Tour pela cidade - Tour com ônibus panorâmico que passa pelos principais pontos turísticos da cidades como o prédio mais alto do mundo, o hotel mais luxuoso do mundo e o shopping com pista de ski interna.</info>
+    <valor>75.32</valor>
+</passeio>
+
+<pacote>
+    <id>13</id>
+    <dataIda dia="12" mes="01" ano="2012" />
+    <dataVolta dia="22" mes="01" ano="2012" />
+    <local>Rio de Janeiro</local>
+    <info>O Rio de Janeiro é a principal cidade turística do país e oferece, além da sua beleza natural, uma excelente infraestrutura aos visitantes. Em 2007, a cidade voltou a ganhar destaque na mídia nacional e internacional e o motivo foi a nomeação do Cristo Redentor como uma das sete novas maravilhas do planeta.
+
+De norte a sul, o Rio de Janeiro oferece inúmeras atrações turísticas. Comece pelo bairro mais famoso da cidade, Copacabana. Nele, você encontrará uma praia repleta de turistas.
+
+Se o que procura é glamour, Ipanema é o bairro certo. Leblon é o universo mais nobre da Zona Sul e é detentora da noite mais agitada da cidade. A tranquilidade pode ser alcançada às margens da Lagoa Rodrigo de Freitas.
+
+Nenhum símbolo carioca, no entanto, iguala-se à fama do Cristo Redentor, o ponto turístico mais visitado do Brasil e o cartão-postal do país mais conhecido no exterior. A visita ao Cristo oferece uma belíssima visão panorâmica da cidade.</info>
+    <valor>767.89</valor>
+</pacote>
+
+<pacote>
+    <id>14</id>
+    <dataIda dia="20" mes="12" ano="2011" />
+    <dataVolta dia="5" mes="01" ano="2012" />
+    <local>Londres</local>
+    <info>Todo mundo tem uma opinião sobre Londres, mesmo que nunca tenha ido para lá. Para alguns, ela é a capital que melhor resume o Velho Continente. Para outros, apenas faz parte de um grande pacote de sonhos e atrações chamado Europa. Há várias palavras para defini-la, por mais contraditórias que sejam: moderna e aristocrática; discreta e irreverente; louca e conservadora são as mais comuns. Mas a melhor seria uma que significasse tudo isso junto.
+
+Londres é, também, a cidade que conheceu a globalização antes mesmo de inventarem o termo. É para lá que todo mundo foi no passado e é para lá que todo mundo vai até hoje. Seja para morar, conhecer, visitar ou simplesmente complementar (ou começar) um giro pela Europa. Que, por sinal, nunca será completo se não incluir a capital inglesa. Afinal, Londres é Londres. E isso já quer dizer muita coisa.</info>
+    <valor>3767.89</valor>
+</pacote>
+
+<pacote>
+    <id>15</id>
+    <dataIda dia="5" mes="12" ano="2011" />
+    <dataVolta dia="5" mes="01" ano="2012" />
+    <local>Bruxelas</local>
+    <info>Uma das capitais mais influentes do mundo, sede da União Européia e da OTAN, Bruxelas é uma cidade com um milhão de habitantes, de elevado padrão de educação, de capacitação tecnológica, de renda e de consumo. A capital da Bélgica é uma das cidades de melhor qualidade de vida no mundo. Através de seu raro conjunto de monumentos históricos e arquitetônicos, sua efervescência cultural e de sua rica gastronomia Bruxelas revela toda a força e brilho do povo belga.
+
+A capital belga oferece lances de emoção para diversos gostos, do fã de cerveja ao admirador do surrealista René Magritte. O francês é a língua local, mas praticamente todo mundo fala inglês.
+
+No verão, a principal atração turística da cidade, a Grand Place, pega fogo. A imponente praça fica cheia, dos cafés e bares com mesas ao ar livre, passando pelos restaurantes sofisticados e lojas de chocolate (as 'chocolateries'). Dica: as cervejas brancas, geladas e com limão, são de derreter o mais duro coração.
+
+O 'triângulo mágico' da Bélgica é formado pelas cervejas, pelos chocolates e pelas artes plásticas. E o Museu de Belas Artes é o melhor dos pubs ou das 'chocolateries' nesse quesito.
+
+Os craques do acervo são pintores do país: o flandrense barroco Peter Paul Rubens e os dois maiores representantes locais do surrealismo, René Magritte e Paul Delvaux. Não à toa, a ala reservada à arte moderna, sobretudo a do século 20, é a mais lotada.
+
+Sua vida noturna é bem tranqüila, então alguns jovens pegam o trem para Ghent e Antuérpia, que têm noites animadíssimas, famosas na Europa inteira.</info>
+    <valor>3767.89</valor>
+</pacote>
+
+<pacote>
+    <id>16</id>
+    <dataIda dia="15" mes="12" ano="2011" />
+    <dataVolta dia="5" mes="01" ano="2012" />
+    <local>Paris </local>
+    <info>A descoberta da França começa pela capital, uma cidade sem igual no mundo, sempre surpreendente.
+
+Paris é uma festa para os sentidos. De ouvir o melodioso som das conversas em francês ao cheirinho delicioso de uma nova fornada de croissants ou de macarons nas boulangeries e pâtisseries, do prazer sublime de saborear uma porção de queijos acompanhada de um vinho nacional à glória de entrar em uma loja de grife fabulosa e tocar numa bolsa ou qualquer outro objeto do desejo que custa alguns milhares de euros, é impossível ficar indiferente aos apelos da cidade mais visitada e das mais inspiradoras do mundo. 
+
+Paris romântica, emocionante, histórica, Paris vibrante, elegante! Paris para namorar, Paris para crianças... Se você estiver em Paris à noite, especialmente durante o Natal e o Ano Novo, não será difícil entender o motivo da expressão "cidade luz". A iluminação enche os olhos de todos que por lá passam. Mas não é só a luminosidade que é abundante na cidade. A arquitetura exala beleza e a programação cultural é intensa. 
+
+Especialmente no plano visual, com seus monumentos grandiosos, museus com acervo idem - só o Louvre detém 400 mil obras de arte, das quais "apenas" cerca de 35 mil ficam em exposição permanente -, românticas pontes ao longo do Rio Sena que convidam a uma caminhada (especialmente a dois), jardins e áreas verdes de proporções generosas, uma prefeitura que parece um palácio... 
+
+As pontes de Paris, as tulipas, os monumentos, os museus, as lojas deslumbrantes, os ballets, o croque-monsieur, todo requinte, o sotaque, os cafés, os vinhos, o Luxembourg...Uh la lá...</info>
+    <valor>4567.89</valor>
+</pacote>
+
+
+
+
+
+
+
+
+
 </infos>
