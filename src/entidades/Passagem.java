@@ -110,7 +110,7 @@ public class Passagem
 	    s.getTransaction().commit();
 	    return ret;
 	}
-
+*/
 	public void salvar()
 	{
 	    Session s = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -118,6 +118,6 @@ public class Passagem
 	    s.save(this);
 	    s.getTransaction().commit();
 	}
-*/
+
 	
 }

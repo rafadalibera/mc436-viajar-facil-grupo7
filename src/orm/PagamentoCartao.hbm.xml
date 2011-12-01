@@ -12,12 +12,13 @@
 		<property name="preco" />
 		<property name="codigoPagamento" />
 		<property name="estado" />
-		<property name="pacote"/>		
 		<property name="numeroCartao"/>
 		<property name="proprietario"/>
 		<property name="bandeira"/>
 		<property name="codigoSeguranca"/>
 		<property name="dataVencimento"/>
+
+		<one-to-one name="pacote" class="Pacote"></one-to-one>
 
 	</class>
 </hibernate-mapping>

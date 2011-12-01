@@ -55,7 +55,7 @@ public class Pagamento
 		return codigoPagamento;
 	}
 
-/*
+	/*
 		public static List<Pagamento> porId(int id)
 	{
 		Session s = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -123,7 +123,7 @@ public class Pagamento
 		s.getTransaction().commit();
 		return ret;
 	}
-
+	*/
 	public void salvar()
 	{
 		Session s = HibernateUtil.getSessionFactory().getCurrentSession();
@@ -132,7 +132,7 @@ public class Pagamento
 		s.getTransaction().commit();
 	}
 
-*/
+
 
 
 }

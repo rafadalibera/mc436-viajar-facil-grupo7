@@ -24,7 +24,7 @@ public class ReservaHotel
 	private double preco;
 	
 	// Construtor basico //
-	ReservaHotel(String hotel, int quarto, int numeroEstrelas, int anoEntrada, int mesEntrada, int diaEntrada,
+	public ReservaHotel(String hotel, int quarto, int numeroEstrelas, int anoEntrada, int mesEntrada, int diaEntrada,
 		     int anoSaida, int mesSaida, int diaSaida, int hospedesQuarto, int id, double preco)
 	{
 		this.hotel = hotel;
@@ -35,6 +35,11 @@ public class ReservaHotel
 		this.hospedesQuarto = hospedesQuarto;
 		this.preco = preco;
 		this.id = id;		
+	}
+
+
+	ReservaHotel()
+	{
 	}
 	////////////////////////////////GETTERS////////////////////////////////////
 					

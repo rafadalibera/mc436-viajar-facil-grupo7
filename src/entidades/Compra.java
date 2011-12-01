@@ -12,27 +12,27 @@ import org.hibernate.Query;
 
 import orm.util.HibernateUtil;
 
-public class Compra 
+public class Compra
 {
 	private int id;
 	private Pacote pacote;
 	private GuiaTuristico guia;
 	private Pagamento pagamento;
-	private List<Passagem> ListaPassagem;
+	private Passagem passagem;
 	private ReservaHotel hotel;
 
     public Compra()
     {
     }
-	
+
 	// Construtor basico //
-	Compra(int id, Pacote pacote, GuiaTuristico guia, Pagamento pagamento, List<Passagem> ListaPassagem, ReservaHotel hotel)
+	Compra(int id, Pacote pacote, GuiaTuristico guia, Pagamento pagamento, Passagem passagem, ReservaHotel hotel)
 	{
 		this.id = id;
 		this.pacote = pacote;
 		this.guia = guia;
 		this.pagamento = pagamento;
-		this.ListaPassagem = ListaPassagem;
+		this.passagem = passagem;
 		this.hotel = hotel;
 	}
 
@@ -53,8 +53,8 @@ public class Compra
 		return pagamento;
 	}
 
-	public List<Passagem> getListaPassagem() {
-		return ListaPassagem;
+	public Passagem getPassagem() {
+		return passagem;
 	}
 
 	public ReservaHotel getHotel() {

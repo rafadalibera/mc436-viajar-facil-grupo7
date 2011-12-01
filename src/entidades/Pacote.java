@@ -160,4 +160,5 @@ public class Pacote
     }
 
 // Fim do código autogerado
+
 }

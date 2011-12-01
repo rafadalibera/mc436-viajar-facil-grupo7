@@ -171,7 +171,7 @@ public class MakeDB
             e = (Element) listaPorTag.item(0);
             local = ((Node) e.getChildNodes().item(0)).getNodeValue().trim();
 
-            // Local
+            // Lingua
             listaPorTag = ((Element) n).getElementsByTagName("lingua");
             e = (Element) listaPorTag.item(0);
             lingua = ((Node) e.getChildNodes().item(0)).getNodeValue().trim();
@@ -194,7 +194,7 @@ public class MakeDB
 
             doc.getDocumentElement().normalize();
 
-            // criaPasseios deve ser chamado antes de criaGuias
+            // criaPasseios deve ser chamado antes de criaPacotes
             criaPasseios(doc);
             criaPacotes(doc);
             criaGuias(doc);
