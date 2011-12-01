@@ -6,7 +6,7 @@
 <hibernate-mapping package="entidades" default-access="field">
 	<class name="Pagamento" table="Pagamento">
 		<id name="id" column="pagamento_id">
-			<generator class="increment"/>
+			<generator class="assigned"/>
 		</id>
 
 		<property name="preco" />

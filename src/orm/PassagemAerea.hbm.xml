@@ -6,7 +6,7 @@
 <hibernate-mapping package="entidades" default-access="field">
 	<class name="PassagemAerea" table="PassagemAerea">
 		<id name="id" column="passagem_id">
-			<generator class="increment"/>
+			<generator class="assigned"/>
 		</id>
 
 		<property name="id" />
